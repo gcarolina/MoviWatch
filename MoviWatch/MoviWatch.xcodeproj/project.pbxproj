@@ -37,6 +37,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F139707029B66F3300F677DE /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F1E7EF82298ADB0200897C93 /* AppDelegate.swift */,
+				F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		F139707129B66F4600F677DE /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F1E7EF8D298ADB0400897C93 /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		F1E7EF76298ADB0100897C93 = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +73,11 @@
 		F1E7EF81298ADB0200897C93 /* MoviWatch */ = {
 			isa = PBXGroup;
 			children = (
-				F1E7EF82298ADB0200897C93 /* AppDelegate.swift */,
-				F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */,
 				F1E7EF86298ADB0200897C93 /* ViewController.swift */,
 				F1E7EF88298ADB0200897C93 /* Main.storyboard */,
+				F139707129B66F4600F677DE /* LaunchScreen */,
+				F139707029B66F3300F677DE /* Delegates */,
 				F1E7EF8B298ADB0400897C93 /* Assets.xcassets */,
-				F1E7EF8D298ADB0400897C93 /* LaunchScreen.storyboard */,
 				F1E7EF90298ADB0400897C93 /* Info.plist */,
 			);
 			path = MoviWatch;
