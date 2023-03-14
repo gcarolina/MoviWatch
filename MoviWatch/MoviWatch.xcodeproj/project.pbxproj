@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		F15BA88429BE542200289A0C /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BA88329BE542200289A0C /* UIColorExt.swift */; };
+		F15ED7E429C06EAC008BCEA3 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E329C06EAB008BCEA3 /* UITextFieldExt.swift */; };
+		F15ED7E629C06EDE008BCEA3 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */; };
+		F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */; };
+		F15ED7EA29C0780C008BCEA3 /* UIScrollViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E929C0780C008BCEA3 /* UIScrollViewExt.swift */; };
 		F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF82298ADB0200897C93 /* AppDelegate.swift */; };
 		F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */; };
 		F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF86298ADB0200897C93 /* SignUpViewController.swift */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		F15BA88329BE542200289A0C /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		F15ED7E329C06EAB008BCEA3 /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
+		F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		F15ED7E929C0780C008BCEA3 /* UIScrollViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExt.swift; sourceTree = "<group>"; };
 		F1E7EF7F298ADB0200897C93 /* MoviWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7EF82298ADB0200897C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				F15BA88329BE542200289A0C /* UIColorExt.swift */,
+				F15ED7E329C06EAB008BCEA3 /* UITextFieldExt.swift */,
+				F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */,
+				F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */,
+				F15ED7E929C0780C008BCEA3 /* UIScrollViewExt.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -181,9 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15ED7E429C06EAC008BCEA3 /* UITextFieldExt.swift in Sources */,
+				F15ED7EA29C0780C008BCEA3 /* UIScrollViewExt.swift in Sources */,
+				F15ED7E629C06EDE008BCEA3 /* UIButtonExt.swift in Sources */,
 				F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */,
 				F15BA88429BE542200289A0C /* UIColorExt.swift in Sources */,
 				F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */,
+				F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */,
 				F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
