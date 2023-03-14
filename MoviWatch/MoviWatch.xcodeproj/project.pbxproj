@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F15BA88429BE542200289A0C /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BA88329BE542200289A0C /* UIColorExt.swift */; };
+		F15ED7E429C06EAC008BCEA3 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E329C06EAB008BCEA3 /* UITextFieldExt.swift */; };
+		F15ED7E629C06EDE008BCEA3 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */; };
+		F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */; };
+		F15ED7EA29C0780C008BCEA3 /* UIScrollViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E929C0780C008BCEA3 /* UIScrollViewExt.swift */; };
 		F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF82298ADB0200897C93 /* AppDelegate.swift */; };
 		F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */; };
-		F1E7EF87298ADB0200897C93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF86298ADB0200897C93 /* ViewController.swift */; };
+		F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF86298ADB0200897C93 /* SignUpViewController.swift */; };
 		F1E7EF8A298ADB0200897C93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E7EF88298ADB0200897C93 /* Main.storyboard */; };
 		F1E7EF8C298ADB0400897C93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1E7EF8B298ADB0400897C93 /* Assets.xcassets */; };
 		F1E7EF8F298ADB0400897C93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1E7EF8D298ADB0400897C93 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F15BA88329BE542200289A0C /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		F15ED7E329C06EAB008BCEA3 /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
+		F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
+		F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		F15ED7E929C0780C008BCEA3 /* UIScrollViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExt.swift; sourceTree = "<group>"; };
 		F1E7EF7F298ADB0200897C93 /* MoviWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7EF82298ADB0200897C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F1E7EF86298ADB0200897C93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F1E7EF86298ADB0200897C93 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F1E7EF89298ADB0200897C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1E7EF8B298ADB0400897C93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1E7EF8E298ADB0400897C93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +64,34 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		F15BA88229BE540800289A0C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F15BA88329BE542200289A0C /* UIColorExt.swift */,
+				F15ED7E329C06EAB008BCEA3 /* UITextFieldExt.swift */,
+				F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */,
+				F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */,
+				F15ED7E929C0780C008BCEA3 /* UIScrollViewExt.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F15BA88529BE543900289A0C /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				F1E7EF86298ADB0200897C93 /* SignUpViewController.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		F15BA88629BE545D00289A0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F1E7EF88298ADB0200897C93 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F1E7EF76298ADB0100897C93 = {
 			isa = PBXGroup;
 			children = (
@@ -73,8 +111,9 @@
 		F1E7EF81298ADB0200897C93 /* MoviWatch */ = {
 			isa = PBXGroup;
 			children = (
-				F1E7EF86298ADB0200897C93 /* ViewController.swift */,
-				F1E7EF88298ADB0200897C93 /* Main.storyboard */,
+				F15BA88229BE540800289A0C /* Extension */,
+				F15BA88529BE543900289A0C /* SignUp */,
+				F15BA88629BE545D00289A0C /* Views */,
 				F139707129B66F4600F677DE /* LaunchScreen */,
 				F139707029B66F3300F677DE /* Delegates */,
 				F1E7EF8B298ADB0400897C93 /* Assets.xcassets */,
@@ -154,8 +193,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1E7EF87298ADB0200897C93 /* ViewController.swift in Sources */,
+				F15ED7E429C06EAC008BCEA3 /* UITextFieldExt.swift in Sources */,
+				F15ED7EA29C0780C008BCEA3 /* UIScrollViewExt.swift in Sources */,
+				F15ED7E629C06EDE008BCEA3 /* UIButtonExt.swift in Sources */,
+				F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */,
+				F15BA88429BE542200289A0C /* UIColorExt.swift in Sources */,
 				F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */,
+				F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */,
 				F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
