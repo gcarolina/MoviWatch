@@ -24,6 +24,12 @@ final class SignUpViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
     private func setUpUI(){
         nameTextField.applyTextFieldStyle(placeholderName: "Profile name")
@@ -31,11 +37,11 @@ final class SignUpViewController: UIViewController {
         passwordTextField.applyTextFieldStyle(placeholderName: "Password")
         logInButton.setButtonStyle()
     }
-}
-
-extension SignUpViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+    
+    @IBAction func logInAction() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController {
+            navigationController?.pushViewController(signInVC, animated: true)
+        }
     }
 }

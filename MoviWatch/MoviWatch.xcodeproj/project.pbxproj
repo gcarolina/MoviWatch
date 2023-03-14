@@ -12,6 +12,7 @@
 		F15ED7E629C06EDE008BCEA3 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */; };
 		F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */; };
 		F15ED7EA29C0780C008BCEA3 /* UIScrollViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E929C0780C008BCEA3 /* UIScrollViewExt.swift */; };
+		F15ED7ED29C07D32008BCEA3 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7EC29C07D32008BCEA3 /* SignInViewController.swift */; };
 		F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF82298ADB0200897C93 /* AppDelegate.swift */; };
 		F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */; };
 		F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF86298ADB0200897C93 /* SignUpViewController.swift */; };
@@ -26,6 +27,7 @@
 		F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 		F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		F15ED7E929C0780C008BCEA3 /* UIScrollViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExt.swift; sourceTree = "<group>"; };
+		F15ED7EC29C07D32008BCEA3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		F1E7EF7F298ADB0200897C93 /* MoviWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7EF82298ADB0200897C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F15ED7EB29C07D08008BCEA3 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				F15ED7EC29C07D32008BCEA3 /* SignInViewController.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		F1E7EF76298ADB0100897C93 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 			children = (
 				F15BA88229BE540800289A0C /* Extension */,
 				F15BA88529BE543900289A0C /* SignUp */,
+				F15ED7EB29C07D08008BCEA3 /* SignIn */,
 				F15BA88629BE545D00289A0C /* Views */,
 				F139707129B66F4600F677DE /* LaunchScreen */,
 				F139707029B66F3300F677DE /* Delegates */,
@@ -198,6 +209,7 @@
 				F15ED7E629C06EDE008BCEA3 /* UIButtonExt.swift in Sources */,
 				F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */,
 				F15BA88429BE542200289A0C /* UIColorExt.swift in Sources */,
+				F15ED7ED29C07D32008BCEA3 /* SignInViewController.swift in Sources */,
 				F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */,
 				F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */,
 				F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */,
