@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1044594070456-5tn73kkb892jn7qo0oos2a4phb4mbnbe.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1044594070456-5tn73kkb892jn7qo0oos2a4phb4mbnbe</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBn7lGtfsyAsX5_wK1_7fA8HsTmi2M2A8E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1044594070456</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>cpp.MoviWatch</string>
+	<key>PROJECT_ID</key>
+	<string>moviwatch-41bcd</string>
+	<key>STORAGE_BUCKET</key>
+	<string>moviwatch-41bcd.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1044594070456:ios:bad631db0d2d7aa067f54d</string>
+	<key>DATABASE_URL</key>
+	<string>https://moviwatch-41bcd-default-rtdb.europe-west1.firebasedatabase.app</string>
+</dict>
+</plist>

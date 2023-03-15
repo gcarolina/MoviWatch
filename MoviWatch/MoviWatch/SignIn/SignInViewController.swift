@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 final class SignInViewController: UIViewController {
-
+    
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var continueBtn: UIButton!
@@ -22,9 +24,11 @@ final class SignInViewController: UIViewController {
         emailTF.delegate = self
         passwordTF.delegate = self
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        emailTF.text = ""
+        passwordTF.text = ""
         
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
@@ -34,7 +38,7 @@ final class SignInViewController: UIViewController {
         passwordTF.applyTextFieldStyle(placeholderName: "Password")
         signUpBtn.setButtonStyle()
     }
-
+    
     @IBAction func signUpAction() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if let signUpVC = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController {
