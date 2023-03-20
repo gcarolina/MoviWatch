@@ -21,4 +21,11 @@ extension UIViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    func pushViewController<T: UIViewController>(withIdentifier identifier: String, viewControllerType: T.Type, storyboardName: String) {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T {
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }

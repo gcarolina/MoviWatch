@@ -22,4 +22,9 @@ extension UITextField {
         // Set the attributed placeholder
         attributedPlaceholder = NSAttributedString(string: placeholderName, attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 86, green: 85, blue: 89)])
     }
+    
+    func clearField() {
+        self.text = ""
+        
+    }
 }

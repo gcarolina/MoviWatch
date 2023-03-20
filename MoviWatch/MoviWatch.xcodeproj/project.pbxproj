@@ -31,6 +31,10 @@
 		F15ED81129C0C98A008BCEA3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81029C0C98A008BCEA3 /* UserModel.swift */; };
 		F15ED81529C1DC71008BCEA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F15ED81429C1DC71008BCEA3 /* GoogleService-Info.plist */; };
 		F15ED81729C273D9008BCEA3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81629C273D9008BCEA3 /* SignUpViewModel.swift */; };
+		F15ED81A29C35679008BCEA3 /* MainScreenCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81929C35679008BCEA3 /* MainScreenCViewController.swift */; };
+		F15ED81C29C35BDC008BCEA3 /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81B29C35BDC008BCEA3 /* MainScreenModel.swift */; };
+		F1630F0829C7B9B700F40978 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1630F0729C7B9B700F40978 /* SignInViewModel.swift */; };
+		F165F61829C465AD0081E479 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165F61729C465AD0081E479 /* MainScreenViewController.swift */; };
 		F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF82298ADB0200897C93 /* AppDelegate.swift */; };
 		F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */; };
 		F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF86298ADB0200897C93 /* SignUpViewController.swift */; };
@@ -49,6 +53,10 @@
 		F15ED81029C0C98A008BCEA3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		F15ED81429C1DC71008BCEA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F15ED81629C273D9008BCEA3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		F15ED81929C35679008BCEA3 /* MainScreenCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCViewController.swift; sourceTree = "<group>"; };
+		F15ED81B29C35BDC008BCEA3 /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
+		F1630F0729C7B9B700F40978 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		F165F61729C465AD0081E479 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
 		F1E7EF7F298ADB0200897C93 /* MoviWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7EF82298ADB0200897C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				F15ED7EC29C07D32008BCEA3 /* SignInViewController.swift */,
+				F1630F0729C7B9B700F40978 /* SignInViewModel.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -143,8 +152,18 @@
 			isa = PBXGroup;
 			children = (
 				F15ED81029C0C98A008BCEA3 /* UserModel.swift */,
+				F15ED81B29C35BDC008BCEA3 /* MainScreenModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F15ED81829C3564B008BCEA3 /* Main screen */ = {
+			isa = PBXGroup;
+			children = (
+				F15ED81929C35679008BCEA3 /* MainScreenCViewController.swift */,
+				F165F61729C465AD0081E479 /* MainScreenViewController.swift */,
+			);
+			path = "Main screen";
 			sourceTree = "<group>";
 		};
 		F1E7EF76298ADB0100897C93 = {
@@ -170,6 +189,7 @@
 				F15BA88229BE540800289A0C /* Extension */,
 				F15BA88529BE543900289A0C /* SignUp */,
 				F15ED7EB29C07D08008BCEA3 /* SignIn */,
+				F15ED81829C3564B008BCEA3 /* Main screen */,
 				F15BA88629BE545D00289A0C /* Views */,
 				F139707129B66F4600F677DE /* LaunchScreen */,
 				F139707029B66F3300F677DE /* Delegates */,
@@ -277,12 +297,16 @@
 				F15ED7E629C06EDE008BCEA3 /* UIButtonExt.swift in Sources */,
 				F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */,
 				F15BA88429BE542200289A0C /* UIColorExt.swift in Sources */,
+				F15ED81A29C35679008BCEA3 /* MainScreenCViewController.swift in Sources */,
 				F15ED7ED29C07D32008BCEA3 /* SignInViewController.swift in Sources */,
 				F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */,
 				F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */,
+				F165F61829C465AD0081E479 /* MainScreenViewController.swift in Sources */,
 				F15ED81129C0C98A008BCEA3 /* UserModel.swift in Sources */,
+				F15ED81C29C35BDC008BCEA3 /* MainScreenModel.swift in Sources */,
 				F15ED81729C273D9008BCEA3 /* SignUpViewModel.swift in Sources */,
 				F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */,
+				F1630F0829C7B9B700F40978 /* SignInViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

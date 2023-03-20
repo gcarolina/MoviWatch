@@ -1,48 +1,75 @@
-//
 //  SignInViewController.swift
 //  MoviWatch
-//
 //  Created by Carolina on 14.03.23.
-//
 
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
 
 final class SignInViewController: UIViewController {
+    private var viewModel: SignInViewModelProtocol?
     
-    @IBOutlet weak var emailTF: UITextField!
-    @IBOutlet weak var passwordTF: UITextField!
-    @IBOutlet weak var continueBtn: UIButton!
-    @IBOutlet weak var signUpBtn: UIButton!
-    @IBOutlet weak var scrollViewSignIn: UIScrollView!
+    @IBOutlet private weak var emailTF: UITextField!
+    @IBOutlet private weak var passwordTF: UITextField!
+    @IBOutlet private weak var continueBtn: UIButton!
+    @IBOutlet private weak var signUpBtn: UIButton!
+    @IBOutlet private weak var scrollViewSignIn: UIScrollView!
     
     override func viewDidLoad() {
+        viewModel = SignInViewModel()
+
         setUpUI()
         scrollViewSignIn.startKeyboardObserver()
         hideKeyboardWhenTappedAround()
-        emailTF.delegate = self
-        passwordTF.delegate = self
+        setDelegates()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        emailTF.text = ""
-        passwordTF.text = ""
-        
+        viewModel?.clearTextFields(emailTextField: emailTF, passwordTextField: passwordTF)
         navigationController?.setNavigationBarHidden(true, animated: animated)
     }
     
+    @IBAction func continueBtnAction() {
+        guard let email = emailTF.text,
+              let password = passwordTF.text,
+              email != "", password != "" else {
+            showAlert(title: "Error", message: "Info is empty")
+            return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
+            if let error {
+                self?.showAlert(title: "Error occurred", message: "\(error.localizedDescription)")
+            } else if let _ = user {
+                self?.pushViewController(withIdentifier: "MainScreenViewController", viewControllerType: MainScreenViewController.self, storyboardName: "Main")
+                return
+            } else {
+                self?.showAlert(title: "Error occurred", message: "No such user")
+            }
+        }
+    }
+    
     private func setUpUI(){
-        emailTF.applyTextFieldStyle(placeholderName: "Email")
-        passwordTF.applyTextFieldStyle(placeholderName: "Password")
+        emailTF.applyTextFieldStyle(placeholderName: UserText.email.rawValue)
+        passwordTF.applyTextFieldStyle(placeholderName: UserText.password.rawValue)
         signUpBtn.setButtonStyle()
     }
     
     @IBAction func signUpAction() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let signUpVC = storyboard.instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController {
-            navigationController?.pushViewController(signUpVC, animated: true)
-        }
+        self.pushViewController(withIdentifier: "SignUpViewController", viewControllerType: SignUpViewController.self, storyboardName: "Main")
+    }
+    
+    private func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+        })
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    private func setDelegates() {
+        emailTF.delegate = self
+        passwordTF.delegate = self
     }
 }

@@ -1,9 +1,6 @@
-//
 //  SignUpViewController.swift
 //  MoviWatch
-//
 //  Created by Carolina on 1.02.23.
-//
 
 import UIKit
 import FirebaseDatabase
@@ -11,6 +8,8 @@ import FirebaseAuth
 
 final class SignUpViewController: UIViewController {
 
+    private var viewModel: SignUpViewModelProtocol?
+    
     @IBOutlet private weak var nameTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
@@ -18,42 +17,28 @@ final class SignUpViewController: UIViewController {
     @IBOutlet private weak var logInButton: UIButton!
     @IBOutlet private weak var scrollView: UIScrollView!
     
-//    private var isTextFieldEmpty = false
-    var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle!
+    private var authStateDidChangeListenerHandle: AuthStateDidChangeListenerHandle!
     
     override func viewDidLoad() {
+        viewModel = SignUpViewModel()
+        
         setUpUI()
         scrollView.startKeyboardObserver()
         hideKeyboardWhenTappedAround()
-        nameTextField.delegate = self
-        emailTextField.delegate = self
-        passwordTextField.delegate = self
-        
-//        authStateDidChangeListenerHandle = Auth.auth().addStateDidChangeListener { [weak self] _, user in
-//            guard let _ = user else { return }
-//
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            if let mainVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController {
-//                self?.navigationController?.pushViewController(mainVC, animated: true)
-//            }
-//        }
+        setDelegates()
+        viewModel?.viewController = self
+//        checkIfPersonIsRegistered()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // очистка полей
-        nameTextField.text = ""
-        emailTextField.text = ""
-        passwordTextField.text = ""
-        
-        navigationController?.setNavigationBarHidden(true, animated: animated)
+        viewModel?.clearTextFields(nameTextField: nameTextField, emailTextField: emailTextField, passwordTextField: passwordTextField)
+        self.navigationItem.hidesBackButton = true
+//        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
-        NotificationCenter.default.removeObserver(self)
-        if let handle = authStateDidChangeListenerHandle {
-            Auth.auth().removeStateDidChangeListener(handle)
-        }
+        viewModel?.removeObservers(authStateDidChangeListenerHandle: authStateDidChangeListenerHandle)
     }
     
     private func setUpUI(){
@@ -64,42 +49,32 @@ final class SignUpViewController: UIViewController {
     }
     
     @IBAction func continueButtonAction() {
-        guard let name = nameTextField.text,
-              let email = emailTextField.text,
-              let password = passwordTextField.text,
-              name != "", email != "", password != "" else {
-//            isTextFieldEmpty = false
-            return
-        }
-//        isTextFieldEmpty = true
-//        continueButton.isEnabled = isTextFieldEmpty
-//
-        Auth.auth().createUser(withEmail: email, password: password) { user, error in
-            if let error = error {
-                print("Ошибка при создании пользователя: \(error.localizedDescription)")
-            } else {
-                guard let user = user else { return }
-                let ref = Database.database().reference().child("users").child(user.user.uid)
-                ref.setValue(["email": user.user.email, "name": name]) { (error, ref) in
-                    if let error = error {
-                        print("Ошибка при записи в базу данных: \(error.localizedDescription)")
-                    } else {
-                        print("Имя пользователя успешно записано в базу данных")
-                    }
+        if ((viewModel?.validateTextFields(nameTextField: nameTextField, emailTextField: emailTextField, passwordTextField: passwordTextField)) != nil) {
+        
+            viewModel?.createUser(name: nameTextField.text, email: emailTextField.text, password: passwordTextField.text) { [weak self] error in
+                if let error = error {
+                    self?.viewModel?.showAlert(title: "Error creating user", message: "\(error.localizedDescription)")
+                } else {
+                    self?.pushViewController(withIdentifier: "MainScreenViewController", viewControllerType: MainScreenViewController.self, storyboardName: "Main")
                 }
             }
-        }
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController {
-            navigationController?.pushViewController(signInVC, animated: true)
         }
     }
     
     @IBAction func logInAction() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        if let signInVC = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController {
-            navigationController?.pushViewController(signInVC, animated: true)
+        self.pushViewController(withIdentifier: "SignInViewController", viewControllerType: SignInViewController.self, storyboardName: "Main")
+    }
+    
+    private func setDelegates() {
+        nameTextField.delegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    private func checkIfPersonIsRegistered() {
+        let handle = viewModel?.addAuthStateDidChangeListener { [weak self] success in
+            guard success else { return }
+            self?.pushViewController(withIdentifier: "MainScreenViewController", viewControllerType: MainScreenViewController.self, storyboardName: "Main")
         }
     }
 }
