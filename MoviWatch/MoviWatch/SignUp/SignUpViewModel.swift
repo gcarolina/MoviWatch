@@ -77,17 +77,14 @@ final class SignUpViewModel: SignUpViewModelProtocol {
     }
     
     func validateTextFields(nameTextField: UITextField, emailTextField: UITextField, passwordTextField: UITextField) -> Bool {
-        guard let name = nameTextField.text, !name.isEmpty else {
-            showAlert(title: "Error!", message: "You're name is empty")
-            return false
-        }
-        guard let email = emailTextField.text, !email.isEmpty else {
-            showAlert(title: "Error!", message: "You're email is empty")
-            return false
-        }
-        guard let password = passwordTextField.text, !password.isEmpty else {
-            showAlert(title: "Error!", message: "You're password is empty")
-            return false
+        let textFields = [nameTextField, emailTextField, passwordTextField]
+        let fieldNames = ["name", "email", "password"]
+        
+        for (index, textField) in textFields.enumerated() {
+            guard let text = textField.text, !text.isEmpty else {
+                showAlert(title: "Error!", message: "The \(fieldNames[index]) field is empty.")
+                return false
+            }
         }
         return true
     }

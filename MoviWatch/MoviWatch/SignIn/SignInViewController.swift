@@ -31,21 +31,12 @@ final class SignInViewController: UIViewController {
     }
     
     @IBAction func continueBtnAction() {
-        guard let email = emailTF.text,
-              let password = passwordTF.text,
-              email != "", password != "" else {
-            showAlert(title: "Error", message: "Info is empty")
-            return
-        }
-        
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] user, error in
-            if let error {
-                self?.showAlert(title: "Error occurred", message: "\(error.localizedDescription)")
-            } else if let _ = user {
+        viewModel?.signIn(email: emailTF.text, password: passwordTF.text) { [weak self] result in
+            switch result {
+            case .success:
                 self?.pushViewController(withIdentifier: "MainScreenViewController", viewControllerType: MainScreenViewController.self, storyboardName: "Main")
-                return
-            } else {
-                self?.showAlert(title: "Error occurred", message: "No such user")
+            case .failure(let error):
+                self?.viewModel?.showAlert(title: "Error occurred", message: error.localizedDescription, onViewController: self!)
             }
         }
     }
@@ -58,14 +49,6 @@ final class SignInViewController: UIViewController {
     
     @IBAction func signUpAction() {
         self.pushViewController(withIdentifier: "SignUpViewController", viewControllerType: SignUpViewController.self, storyboardName: "Main")
-    }
-    
-    private func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
-        })
-        alertController.addAction(okAction)
-        self.present(alertController, animated: true, completion: nil)
     }
     
     private func setDelegates() {

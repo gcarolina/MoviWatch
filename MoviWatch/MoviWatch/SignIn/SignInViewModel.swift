@@ -7,56 +7,39 @@ import FirebaseDatabase
 import FirebaseAuth
 
 protocol SignInViewModelProtocol {
-    var viewController: UIViewController? { get set }
     func clearTextFields(emailTextField: UITextField, passwordTextField: UITextField)
-    func showAlert(title: String, message: String)
-    func signInUser(email: String?, password: String?, completion: @escaping (Error?) -> Void)
-    func validateTextFields(emailTextField: UITextField, passwordTextField: UITextField) -> Bool
+    func showAlert(title: String, message: String, onViewController viewController: UIViewController)
+    func signIn(email: String?, password: String?, completion: @escaping (Result<Void, Error>) -> Void)
 }
 
 final class SignInViewModel: SignInViewModelProtocol {
-    var viewController: UIViewController?
     
     func clearTextFields(emailTextField: UITextField, passwordTextField: UITextField) {
         emailTextField.clearField()
         passwordTextField.clearField()
     }
     
-    func showAlert(title: String, message: String) {
-        guard let viewController = viewController else {
-            return
-        }
+    func showAlert(title: String, message: String, onViewController viewController: UIViewController) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(okAction)
         viewController.present(alertController, animated: true, completion: nil)
     }
-    
-    func signInUser(email: String?, password: String?, completion: @escaping (Error?) -> Void) {
-        guard let email = email,
-              let password = password else { return }
+
+    func signIn(email: String?, password: String?, completion: @escaping (Result<Void, Error>) -> Void) {
+        guard let email = email, let password = password, !email.isEmpty, !password.isEmpty else {
+            completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "Info is empty"])))
+            return
+        }
         
         Auth.auth().signIn(withEmail: email, password: password) { user, error in
             if let error = error {
-                completion(error)
-            } else if let _ = user {
-                completion(error)
+                completion(.failure(error))
+            } else if user != nil {
+                completion(.success(()))
             } else {
-                completion(nil)
+                completion(.failure(NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey: "No such user"])))
             }
         }
     }
-    
-    func validateTextFields(emailTextField: UITextField, passwordTextField: UITextField) -> Bool {
-        guard let email = emailTextField.text, !email.isEmpty else {
-            showAlert(title: "Error!", message: "You're email is empty")
-            return false
-        }
-        guard let password = passwordTextField.text, !password.isEmpty else {
-            showAlert(title: "Error!", message: "You're password is empty")
-            return false
-        }
-        return true
-    }
-    
 }
