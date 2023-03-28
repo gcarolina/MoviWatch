@@ -13,23 +13,24 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICo
     @IBOutlet private weak var collectionView: UICollectionView!
     private var ref: DatabaseReference!
     
-    @IBOutlet weak var labelNme: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // связываем делегат и источник данных с UICollectionView
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        // регистрируем ячейки для использования в UICollectionView
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+        collectionView.register(UINib(nibName: "MainCVCell", bundle: .main), forCellWithReuseIdentifier: "MainCVCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // отключение жеста возврата по свайпу
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        self.navigationItem.hidesBackButton = true
+        
+        let sizeWH = (UIScreen.main.bounds.height / 4)
+
+        let collectionViewFlowLayout = UICollectionViewFlowLayout()
+        collectionViewFlowLayout.scrollDirection = .horizontal // set scroll direction to horizontal
+        collectionViewFlowLayout.itemSize = CGSize(width: sizeWH, height: sizeWH)
+        collectionView.collectionViewLayout = collectionViewFlowLayout
         
         // достаем текущего юзера
         guard let currentUser = Auth.auth().currentUser else { return }
@@ -40,22 +41,25 @@ class MainScreenViewController: UIViewController, UICollectionViewDelegate, UICo
         ref.observeSingleEvent(of: .value) { [weak self] snapshot in
             print(snapshot)
             let model = UserName(snapshot: snapshot)
-            self?.navigationItem.title = model?.name
-            self?.labelNme.text = model?.name
+            guard let namePerson = model?.name else { return }
+            self?.navigationItem.title = "Welcome, \(namePerson)!"
         }
     }
     
-    
-    
+
     // реализация метода UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        5
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         2
     }
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         // возвращает ячейку для конкретной позиции в UICollectionView
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        // конфигурируем ячейку
-        // ...
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainCVCell", for: indexPath) as! MainCVCell
         return cell
     }
     

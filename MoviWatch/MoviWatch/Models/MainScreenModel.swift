@@ -10,19 +10,16 @@ import FirebaseDatabase
 
 struct UserName {
     
-    // MARK: Internal
-
+    // MARK: - Internal
     let name: String
     let ref: DatabaseReference? // Reference к конкретной записи в DB
     
-    // MARK: Lifecycle
-
+    // MARK: - Lifecycle
     // для создания объекта локально
     init(name: String, userID: String) {
         self.name = name
         self.ref = nil
     }
-
     // для создания объекта из сети
     init?(snapshot: DataSnapshot) { // DataSnapshot - снимок иерархии DB
         guard let snapshotValue = snapshot.value as? [String: Any],
@@ -35,8 +32,7 @@ struct UserName {
         [Constants.nameKey: name]
     }
 
-    // MARK: Private
-
+    // MARK: -  Private
     private enum Constants {
         static let nameKey = "name"
     }

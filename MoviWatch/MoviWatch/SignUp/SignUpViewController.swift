@@ -34,7 +34,7 @@ final class SignUpViewController: UIViewController {
         super.viewWillAppear(animated)
         viewModel?.clearTextFields(nameTextField: nameTextField, emailTextField: emailTextField, passwordTextField: passwordTextField)
         self.navigationItem.hidesBackButton = true
-//        navigationController?.setNavigationBarHidden(true, animated: animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -55,7 +55,7 @@ final class SignUpViewController: UIViewController {
                 if let error = error {
                     self?.viewModel?.showAlert(title: "Error creating user", message: "\(error.localizedDescription)")
                 } else {
-                    self?.pushViewController(withIdentifier: "MainScreenViewController", viewControllerType: MainScreenViewController.self, storyboardName: "Main")
+                    self?.pushViewController(withIdentifier: "AppStoreViewController", viewControllerType: AppStoreViewController.self, storyboardName: "Main")
                 }
             }
         }
@@ -74,7 +74,7 @@ final class SignUpViewController: UIViewController {
     private func checkIfPersonIsRegistered() {
         let handle = viewModel?.addAuthStateDidChangeListener { [weak self] success in
             guard success else { return }
-            self?.pushViewController(withIdentifier: "MainScreenViewController", viewControllerType: MainScreenViewController.self, storyboardName: "Main")
+            self?.pushViewController(withIdentifier: "AppStoreViewController", viewControllerType: AppStoreViewController.self, storyboardName: "Main")
         }
     }
 }

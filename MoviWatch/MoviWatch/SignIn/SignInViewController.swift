@@ -34,7 +34,7 @@ final class SignInViewController: UIViewController {
         viewModel?.signIn(email: emailTF.text, password: passwordTF.text) { [weak self] result in
             switch result {
             case .success:
-                self?.pushViewController(withIdentifier: "MainScreenViewController", viewControllerType: MainScreenViewController.self, storyboardName: "Main")
+                self?.pushViewController(withIdentifier: "AppStoreViewController", viewControllerType: AppStoreViewController.self, storyboardName: "Main")
             case .failure(let error):
                 self?.viewModel?.showAlert(title: "Error occurred", message: error.localizedDescription, onViewController: self!)
             }

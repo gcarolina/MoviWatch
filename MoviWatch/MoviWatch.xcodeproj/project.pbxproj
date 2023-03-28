@@ -7,7 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43A2258D9B27DC6B2F1CF046 /* Pods_MoviWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 507E217AE88F92EC9B673B96 /* Pods_MoviWatch.framework */; };
 		F15BA88429BE542200289A0C /* UIColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15BA88329BE542200289A0C /* UIColorExt.swift */; };
+		F15D9E9429D20005007CFD81 /* AppStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9E9329D20005007CFD81 /* AppStoreViewController.swift */; };
+		F15D9E9B29D20306007CFD81 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9E9929D20306007CFD81 /* BannerCell.swift */; };
+		F15D9E9C29D20306007CFD81 /* BannerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F15D9E9A29D20306007CFD81 /* BannerCell.xib */; };
+		F15D9E9E29D20398007CFD81 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9E9D29D20398007CFD81 /* Banner.swift */; };
+		F15D9EA429D21D64007CFD81 /* MainCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F15D9EA329D21D64007CFD81 /* MainCVCell.xib */; };
+		F15D9EA629D21D6D007CFD81 /* MainCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EA529D21D6D007CFD81 /* MainCVCell.swift */; };
+		F15D9EA929D21D87007CFD81 /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EA729D21D85007CFD81 /* MyTableViewCell.swift */; };
+		F15D9EAA29D21D87007CFD81 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EA829D21D86007CFD81 /* MyTableViewController.swift */; };
+		F15D9EAE29D23BDE007CFD81 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F15D9EAD29D23BDE007CFD81 /* Alamofire */; };
+		F15D9EB129D23C54007CFD81 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = F15D9EB029D23C54007CFD81 /* AlamofireImage */; };
+		F15D9EB429D24C57007CFD81 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EB329D24C57007CFD81 /* Film.swift */; };
+		F15D9EB629D2D994007CFD81 /* SeasonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EB529D2D994007CFD81 /* SeasonResponse.swift */; };
+		F15D9EB829D2D9CF007CFD81 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EB729D2D9CF007CFD81 /* Season.swift */; };
+		F15D9EBA29D2DA2E007CFD81 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EB929D2DA2E007CFD81 /* Episode.swift */; };
+		F15D9EBC29D2DAF0007CFD81 /* BoxOfficeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EBB29D2DAF0007CFD81 /* BoxOfficeResponse.swift */; };
+		F15D9EBE29D2DBFE007CFD81 /* BoxOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EBD29D2DBFE007CFD81 /* BoxOffice.swift */; };
+		F15D9EC029D2DC4E007CFD81 /* Fact.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EBF29D2DC4E007CFD81 /* Fact.swift */; };
+		F15D9EC229D2DDF4007CFD81 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EC129D2DDF4007CFD81 /* Country.swift */; };
+		F15D9EC429D2DE19007CFD81 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EC329D2DE19007CFD81 /* Genre.swift */; };
+		F15D9EC629D2DF18007CFD81 /* FilmSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EC529D2DF18007CFD81 /* FilmSearchResponse.swift */; };
+		F15D9EC829D2DF6B007CFD81 /* FilmSearchResponseFilms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EC729D2DF6B007CFD81 /* FilmSearchResponseFilms.swift */; };
+		F15D9ECA29D2E496007CFD81 /* PersonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EC929D2E496007CFD81 /* PersonResponse.swift */; };
+		F15D9ECC29D2E633007CFD81 /* PersonResponseFilms.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9ECB29D2E633007CFD81 /* PersonResponseFilms.swift */; };
+		F15D9ECE29D2E7B2007CFD81 /* ImageResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9ECD29D2E7B2007CFD81 /* ImageResponse.swift */; };
+		F15D9ED029D2E7EC007CFD81 /* ImageResponseItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9ECF29D2E7EC007CFD81 /* ImageResponseItems.swift */; };
+		F15D9ED229D2E818007CFD81 /* VideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9ED129D2E818007CFD81 /* VideoResponse.swift */; };
+		F15D9ED429D2E849007CFD81 /* VideoResponseItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9ED329D2E849007CFD81 /* VideoResponseItems.swift */; };
+		F15D9ED629D2F4FD007CFD81 /* FilmSearchByFiltersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9ED529D2F4FD007CFD81 /* FilmSearchByFiltersResponse.swift */; };
+		F15D9ED829D2F53B007CFD81 /* FilmSearchByFiltersResponseItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9ED729D2F53B007CFD81 /* FilmSearchByFiltersResponseItems.swift */; };
+		F15D9EDA29D31477007CFD81 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9ED929D31477007CFD81 /* TableViewController.swift */; };
+		F15D9EDC29D3176A007CFD81 /* FilterResponseGenres.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EDB29D3176A007CFD81 /* FilterResponseGenres.swift */; };
+		F15D9EDE29D33483007CFD81 /* FilterResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15D9EDD29D33483007CFD81 /* FilterResponse.swift */; };
 		F15ED7E429C06EAC008BCEA3 /* UITextFieldExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E329C06EAB008BCEA3 /* UITextFieldExt.swift */; };
 		F15ED7E629C06EDE008BCEA3 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */; };
 		F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */; };
@@ -28,10 +61,9 @@
 		F15ED80A29C0A945008BCEA3 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = F15ED80929C0A945008BCEA3 /* FirebaseInstallations */; };
 		F15ED80C29C0A945008BCEA3 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = F15ED80B29C0A945008BCEA3 /* FirebasePerformance */; };
 		F15ED80E29C0A945008BCEA3 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F15ED80D29C0A945008BCEA3 /* FirebaseStorage */; };
-		F15ED81129C0C98A008BCEA3 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81029C0C98A008BCEA3 /* UserModel.swift */; };
+		F15ED81129C0C98A008BCEA3 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81029C0C98A008BCEA3 /* SignUpModel.swift */; };
 		F15ED81529C1DC71008BCEA3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F15ED81429C1DC71008BCEA3 /* GoogleService-Info.plist */; };
 		F15ED81729C273D9008BCEA3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81629C273D9008BCEA3 /* SignUpViewModel.swift */; };
-		F15ED81A29C35679008BCEA3 /* MainScreenCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81929C35679008BCEA3 /* MainScreenCViewController.swift */; };
 		F15ED81C29C35BDC008BCEA3 /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81B29C35BDC008BCEA3 /* MainScreenModel.swift */; };
 		F1630F0829C7B9B700F40978 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1630F0729C7B9B700F40978 /* SignInViewModel.swift */; };
 		F165F61829C465AD0081E479 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F165F61729C465AD0081E479 /* MainScreenViewController.swift */; };
@@ -44,16 +76,48 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09AB8159C090BAC62440CAF7 /* Pods-MoviWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviWatch.debug.xcconfig"; path = "Target Support Files/Pods-MoviWatch/Pods-MoviWatch.debug.xcconfig"; sourceTree = "<group>"; };
+		18250CB4CA61C5570131F026 /* Pods-MoviWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviWatch.release.xcconfig"; path = "Target Support Files/Pods-MoviWatch/Pods-MoviWatch.release.xcconfig"; sourceTree = "<group>"; };
+		507E217AE88F92EC9B673B96 /* Pods_MoviWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoviWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15BA88329BE542200289A0C /* UIColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExt.swift; sourceTree = "<group>"; };
+		F15D9E9329D20005007CFD81 /* AppStoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreViewController.swift; sourceTree = "<group>"; };
+		F15D9E9929D20306007CFD81 /* BannerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		F15D9E9A29D20306007CFD81 /* BannerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BannerCell.xib; sourceTree = "<group>"; };
+		F15D9E9D29D20398007CFD81 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		F15D9EA329D21D64007CFD81 /* MainCVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCVCell.xib; sourceTree = "<group>"; };
+		F15D9EA529D21D6D007CFD81 /* MainCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainCVCell.swift; sourceTree = "<group>"; };
+		F15D9EA729D21D85007CFD81 /* MyTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		F15D9EA829D21D86007CFD81 /* MyTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		F15D9EB329D24C57007CFD81 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		F15D9EB529D2D994007CFD81 /* SeasonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonResponse.swift; sourceTree = "<group>"; };
+		F15D9EB729D2D9CF007CFD81 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		F15D9EB929D2DA2E007CFD81 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		F15D9EBB29D2DAF0007CFD81 /* BoxOfficeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeResponse.swift; sourceTree = "<group>"; };
+		F15D9EBD29D2DBFE007CFD81 /* BoxOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOffice.swift; sourceTree = "<group>"; };
+		F15D9EBF29D2DC4E007CFD81 /* Fact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fact.swift; sourceTree = "<group>"; };
+		F15D9EC129D2DDF4007CFD81 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		F15D9EC329D2DE19007CFD81 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		F15D9EC529D2DF18007CFD81 /* FilmSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSearchResponse.swift; sourceTree = "<group>"; };
+		F15D9EC729D2DF6B007CFD81 /* FilmSearchResponseFilms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSearchResponseFilms.swift; sourceTree = "<group>"; };
+		F15D9EC929D2E496007CFD81 /* PersonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonResponse.swift; sourceTree = "<group>"; };
+		F15D9ECB29D2E633007CFD81 /* PersonResponseFilms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonResponseFilms.swift; sourceTree = "<group>"; };
+		F15D9ECD29D2E7B2007CFD81 /* ImageResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponse.swift; sourceTree = "<group>"; };
+		F15D9ECF29D2E7EC007CFD81 /* ImageResponseItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResponseItems.swift; sourceTree = "<group>"; };
+		F15D9ED129D2E818007CFD81 /* VideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResponse.swift; sourceTree = "<group>"; };
+		F15D9ED329D2E849007CFD81 /* VideoResponseItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoResponseItems.swift; sourceTree = "<group>"; };
+		F15D9ED529D2F4FD007CFD81 /* FilmSearchByFiltersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSearchByFiltersResponse.swift; sourceTree = "<group>"; };
+		F15D9ED729D2F53B007CFD81 /* FilmSearchByFiltersResponseItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmSearchByFiltersResponseItems.swift; sourceTree = "<group>"; };
+		F15D9ED929D31477007CFD81 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		F15D9EDB29D3176A007CFD81 /* FilterResponseGenres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResponseGenres.swift; sourceTree = "<group>"; };
+		F15D9EDD29D33483007CFD81 /* FilterResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterResponse.swift; sourceTree = "<group>"; };
 		F15ED7E329C06EAB008BCEA3 /* UITextFieldExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExt.swift; sourceTree = "<group>"; };
 		F15ED7E529C06EDE008BCEA3 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 		F15ED7E729C07206008BCEA3 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		F15ED7E929C0780C008BCEA3 /* UIScrollViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollViewExt.swift; sourceTree = "<group>"; };
 		F15ED7EC29C07D32008BCEA3 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		F15ED81029C0C98A008BCEA3 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		F15ED81029C0C98A008BCEA3 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		F15ED81429C1DC71008BCEA3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F15ED81629C273D9008BCEA3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
-		F15ED81929C35679008BCEA3 /* MainScreenCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCViewController.swift; sourceTree = "<group>"; };
 		F15ED81B29C35BDC008BCEA3 /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
 		F1630F0729C7B9B700F40978 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		F165F61729C465AD0081E479 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
@@ -83,16 +147,36 @@
 				F15ED80E29C0A945008BCEA3 /* FirebaseStorage in Frameworks */,
 				F15ED80629C0A945008BCEA3 /* FirebaseFirestoreSwift in Frameworks */,
 				F15ED7FC29C0A945008BCEA3 /* FirebaseCrashlytics in Frameworks */,
+				F15D9EB129D23C54007CFD81 /* AlamofireImage in Frameworks */,
 				F15ED80229C0A945008BCEA3 /* FirebaseDynamicLinks in Frameworks */,
+				F15D9EAE29D23BDE007CFD81 /* Alamofire in Frameworks */,
 				F15ED7F829C0A945008BCEA3 /* FirebaseAuth in Frameworks */,
 				F15ED7FE29C0A945008BCEA3 /* FirebaseDatabase in Frameworks */,
 				F15ED7FA29C0A945008BCEA3 /* FirebaseAuthCombine-Community in Frameworks */,
+				43A2258D9B27DC6B2F1CF046 /* Pods_MoviWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		492F4BA73510602B70BA01FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				507E217AE88F92EC9B673B96 /* Pods_MoviWatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		70416B20934FA9C91DC753AC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				09AB8159C090BAC62440CAF7 /* Pods-MoviWatch.debug.xcconfig */,
+				18250CB4CA61C5570131F026 /* Pods-MoviWatch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F139707029B66F3300F677DE /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +223,57 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F15D9E9229D1FFEB007CFD81 /* AppStore */ = {
+			isa = PBXGroup;
+			children = (
+				F15D9E9329D20005007CFD81 /* AppStoreViewController.swift */,
+				F15D9E9929D20306007CFD81 /* BannerCell.swift */,
+				F15D9E9A29D20306007CFD81 /* BannerCell.xib */,
+				F15D9E9D29D20398007CFD81 /* Banner.swift */,
+			);
+			path = AppStore;
+			sourceTree = "<group>";
+		};
+		F15D9EAB29D21FC1007CFD81 /* MainController */ = {
+			isa = PBXGroup;
+			children = (
+				F165F61729C465AD0081E479 /* MainScreenViewController.swift */,
+				F15D9EA329D21D64007CFD81 /* MainCVCell.xib */,
+				F15D9EA529D21D6D007CFD81 /* MainCVCell.swift */,
+				F15D9EA729D21D85007CFD81 /* MyTableViewCell.swift */,
+				F15D9EA829D21D86007CFD81 /* MyTableViewController.swift */,
+			);
+			path = MainController;
+			sourceTree = "<group>";
+		};
+		F15D9EB229D24C3F007CFD81 /* FilmInfo */ = {
+			isa = PBXGroup;
+			children = (
+				F15D9EB329D24C57007CFD81 /* Film.swift */,
+				F15D9EC129D2DDF4007CFD81 /* Country.swift */,
+				F15D9EC329D2DE19007CFD81 /* Genre.swift */,
+				F15D9EB529D2D994007CFD81 /* SeasonResponse.swift */,
+				F15D9EB729D2D9CF007CFD81 /* Season.swift */,
+				F15D9EB929D2DA2E007CFD81 /* Episode.swift */,
+				F15D9EBB29D2DAF0007CFD81 /* BoxOfficeResponse.swift */,
+				F15D9EBD29D2DBFE007CFD81 /* BoxOffice.swift */,
+				F15D9EBF29D2DC4E007CFD81 /* Fact.swift */,
+				F15D9EDD29D33483007CFD81 /* FilterResponse.swift */,
+				F15D9EDB29D3176A007CFD81 /* FilterResponseGenres.swift */,
+				F15D9EC529D2DF18007CFD81 /* FilmSearchResponse.swift */,
+				F15D9EC729D2DF6B007CFD81 /* FilmSearchResponseFilms.swift */,
+				F15D9ED529D2F4FD007CFD81 /* FilmSearchByFiltersResponse.swift */,
+				F15D9ED729D2F53B007CFD81 /* FilmSearchByFiltersResponseItems.swift */,
+				F15D9EC929D2E496007CFD81 /* PersonResponse.swift */,
+				F15D9ECB29D2E633007CFD81 /* PersonResponseFilms.swift */,
+				F15D9ECD29D2E7B2007CFD81 /* ImageResponse.swift */,
+				F15D9ECF29D2E7EC007CFD81 /* ImageResponseItems.swift */,
+				F15D9ED129D2E818007CFD81 /* VideoResponse.swift */,
+				F15D9ED329D2E849007CFD81 /* VideoResponseItems.swift */,
+			);
+			path = FilmInfo;
+			sourceTree = "<group>";
+		};
 		F15ED7EB29C07D08008BCEA3 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +286,8 @@
 		F15ED80F29C0C945008BCEA3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F15ED81029C0C98A008BCEA3 /* UserModel.swift */,
+				F15D9EB229D24C3F007CFD81 /* FilmInfo */,
+				F15ED81029C0C98A008BCEA3 /* SignUpModel.swift */,
 				F15ED81B29C35BDC008BCEA3 /* MainScreenModel.swift */,
 			);
 			path = Models;
@@ -160,8 +296,9 @@
 		F15ED81829C3564B008BCEA3 /* Main screen */ = {
 			isa = PBXGroup;
 			children = (
-				F15ED81929C35679008BCEA3 /* MainScreenCViewController.swift */,
-				F165F61729C465AD0081E479 /* MainScreenViewController.swift */,
+				F15D9E9229D1FFEB007CFD81 /* AppStore */,
+				F15D9EAB29D21FC1007CFD81 /* MainController */,
+				F15D9ED929D31477007CFD81 /* TableViewController.swift */,
 			);
 			path = "Main screen";
 			sourceTree = "<group>";
@@ -171,6 +308,8 @@
 			children = (
 				F1E7EF81298ADB0200897C93 /* MoviWatch */,
 				F1E7EF80298ADB0200897C93 /* Products */,
+				70416B20934FA9C91DC753AC /* Pods */,
+				492F4BA73510602B70BA01FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,8 +324,8 @@
 		F1E7EF81298ADB0200897C93 /* MoviWatch */ = {
 			isa = PBXGroup;
 			children = (
-				F15ED80F29C0C945008BCEA3 /* Models */,
 				F15BA88229BE540800289A0C /* Extension */,
+				F15ED80F29C0C945008BCEA3 /* Models */,
 				F15BA88529BE543900289A0C /* SignUp */,
 				F15ED7EB29C07D08008BCEA3 /* SignIn */,
 				F15ED81829C3564B008BCEA3 /* Main screen */,
@@ -207,9 +346,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1E7EF93298ADB0400897C93 /* Build configuration list for PBXNativeTarget "MoviWatch" */;
 			buildPhases = (
+				BB3C8DC3CA0340BD361DF639 /* [CP] Check Pods Manifest.lock */,
 				F1E7EF7B298ADB0200897C93 /* Sources */,
 				F1E7EF7C298ADB0200897C93 /* Frameworks */,
 				F1E7EF7D298ADB0200897C93 /* Resources */,
+				76AB210C3E398A9D7F2FBD36 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +373,8 @@
 				F15ED80929C0A945008BCEA3 /* FirebaseInstallations */,
 				F15ED80B29C0A945008BCEA3 /* FirebasePerformance */,
 				F15ED80D29C0A945008BCEA3 /* FirebaseStorage */,
+				F15D9EAD29D23BDE007CFD81 /* Alamofire */,
+				F15D9EB029D23C54007CFD81 /* AlamofireImage */,
 			);
 			productName = MoviWatch;
 			productReference = F1E7EF7F298ADB0200897C93 /* MoviWatch.app */;
@@ -263,6 +406,8 @@
 			mainGroup = F1E7EF76298ADB0100897C93;
 			packageReferences = (
 				F15ED7F029C0A945008BCEA3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F15D9EAC29D23BDE007CFD81 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F15D9EAF29D23C53007CFD81 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = F1E7EF80298ADB0200897C93 /* Products */;
 			projectDirPath = "";
@@ -281,32 +426,103 @@
 				F1E7EF8F298ADB0400897C93 /* LaunchScreen.storyboard in Resources */,
 				F15ED81529C1DC71008BCEA3 /* GoogleService-Info.plist in Resources */,
 				F1E7EF8C298ADB0400897C93 /* Assets.xcassets in Resources */,
+				F15D9EA429D21D64007CFD81 /* MainCVCell.xib in Resources */,
+				F15D9E9C29D20306007CFD81 /* BannerCell.xib in Resources */,
 				F1E7EF8A298ADB0200897C93 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		76AB210C3E398A9D7F2FBD36 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoviWatch/Pods-MoviWatch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MoviWatch/Pods-MoviWatch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MoviWatch/Pods-MoviWatch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB3C8DC3CA0340BD361DF639 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoviWatch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F1E7EF7B298ADB0200897C93 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15D9EC229D2DDF4007CFD81 /* Country.swift in Sources */,
+				F15D9EA929D21D87007CFD81 /* MyTableViewCell.swift in Sources */,
+				F15D9EBA29D2DA2E007CFD81 /* Episode.swift in Sources */,
+				F15D9EDA29D31477007CFD81 /* TableViewController.swift in Sources */,
+				F15D9EDE29D33483007CFD81 /* FilterResponse.swift in Sources */,
+				F15D9ED629D2F4FD007CFD81 /* FilmSearchByFiltersResponse.swift in Sources */,
 				F15ED7E429C06EAC008BCEA3 /* UITextFieldExt.swift in Sources */,
 				F15ED7EA29C0780C008BCEA3 /* UIScrollViewExt.swift in Sources */,
+				F15D9EDC29D3176A007CFD81 /* FilterResponseGenres.swift in Sources */,
+				F15D9EAA29D21D87007CFD81 /* MyTableViewController.swift in Sources */,
+				F15D9EBE29D2DBFE007CFD81 /* BoxOffice.swift in Sources */,
 				F15ED7E629C06EDE008BCEA3 /* UIButtonExt.swift in Sources */,
+				F15D9E9E29D20398007CFD81 /* Banner.swift in Sources */,
 				F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */,
+				F15D9ED429D2E849007CFD81 /* VideoResponseItems.swift in Sources */,
+				F15D9EC429D2DE19007CFD81 /* Genre.swift in Sources */,
 				F15BA88429BE542200289A0C /* UIColorExt.swift in Sources */,
-				F15ED81A29C35679008BCEA3 /* MainScreenCViewController.swift in Sources */,
+				F15D9EC629D2DF18007CFD81 /* FilmSearchResponse.swift in Sources */,
 				F15ED7ED29C07D32008BCEA3 /* SignInViewController.swift in Sources */,
 				F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */,
+				F15D9E9429D20005007CFD81 /* AppStoreViewController.swift in Sources */,
+				F15D9ED229D2E818007CFD81 /* VideoResponse.swift in Sources */,
 				F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */,
 				F165F61829C465AD0081E479 /* MainScreenViewController.swift in Sources */,
-				F15ED81129C0C98A008BCEA3 /* UserModel.swift in Sources */,
+				F15D9ED029D2E7EC007CFD81 /* ImageResponseItems.swift in Sources */,
+				F15D9ECE29D2E7B2007CFD81 /* ImageResponse.swift in Sources */,
+				F15D9EC829D2DF6B007CFD81 /* FilmSearchResponseFilms.swift in Sources */,
+				F15D9EB429D24C57007CFD81 /* Film.swift in Sources */,
+				F15D9EA629D21D6D007CFD81 /* MainCVCell.swift in Sources */,
+				F15D9ECA29D2E496007CFD81 /* PersonResponse.swift in Sources */,
+				F15D9EB829D2D9CF007CFD81 /* Season.swift in Sources */,
+				F15ED81129C0C98A008BCEA3 /* SignUpModel.swift in Sources */,
 				F15ED81C29C35BDC008BCEA3 /* MainScreenModel.swift in Sources */,
+				F15D9EBC29D2DAF0007CFD81 /* BoxOfficeResponse.swift in Sources */,
+				F15D9EB629D2D994007CFD81 /* SeasonResponse.swift in Sources */,
+				F15D9EC029D2DC4E007CFD81 /* Fact.swift in Sources */,
 				F15ED81729C273D9008BCEA3 /* SignUpViewModel.swift in Sources */,
 				F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */,
+				F15D9ED829D2F53B007CFD81 /* FilmSearchByFiltersResponseItems.swift in Sources */,
+				F15D9ECC29D2E633007CFD81 /* PersonResponseFilms.swift in Sources */,
 				F1630F0829C7B9B700F40978 /* SignInViewModel.swift in Sources */,
+				F15D9E9B29D20306007CFD81 /* BannerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +664,7 @@
 		};
 		F1E7EF94298ADB0400897C93 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09AB8159C090BAC62440CAF7 /* Pods-MoviWatch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -476,6 +693,7 @@
 		};
 		F1E7EF95298ADB0400897C93 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18250CB4CA61C5570131F026 /* Pods-MoviWatch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -526,6 +744,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F15D9EAC29D23BDE007CFD81 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		F15D9EAF29D23C53007CFD81 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		F15ED7F029C0A945008BCEA3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -537,6 +771,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F15D9EAD29D23BDE007CFD81 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F15D9EAC29D23BDE007CFD81 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		F15D9EB029D23C54007CFD81 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F15D9EAF29D23C53007CFD81 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		F15ED7F129C0A945008BCEA3 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F15ED7F029C0A945008BCEA3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

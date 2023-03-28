@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BannerCell" id="48R-in-CZa" customClass="BannerCell" customModule="MoviWatch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="587" height="309"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="587" height="309"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFi-8R-zzt">
+                        <rect key="frame" x="0.0" y="0.0" width="587" height="309"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="M76-Aq-leo">
+                                <rect key="frame" x="0.0" y="0.0" width="587" height="309"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="754" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SmA-jh-5Aa">
+                                        <rect key="frame" x="0.0" y="0.0" width="52" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="753" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7iT-sQ-IRG">
+                                        <rect key="frame" x="0.0" y="37.666666666666664" width="41.333333333333336" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="248" image="13" translatesAutoresizingMaskIntoConstraints="NO" id="69a-WU-xZo">
+                                        <rect key="frame" x="0.0" y="62" width="587" height="247"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="M76-Aq-leo" firstAttribute="top" secondItem="JFi-8R-zzt" secondAttribute="top" id="Ecq-OI-8pu"/>
+                            <constraint firstAttribute="trailing" secondItem="M76-Aq-leo" secondAttribute="trailing" id="NsB-le-Nzr"/>
+                            <constraint firstItem="M76-Aq-leo" firstAttribute="leading" secondItem="JFi-8R-zzt" secondAttribute="leading" id="iOP-Q4-6zv"/>
+                            <constraint firstAttribute="bottom" secondItem="M76-Aq-leo" secondAttribute="bottom" id="pMd-o6-1HY"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="7sJ-FU-KbM"/>
+            <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="JFi-8R-zzt" firstAttribute="top" secondItem="48R-in-CZa" secondAttribute="top" id="6gI-BB-21T"/>
+                <constraint firstItem="JFi-8R-zzt" firstAttribute="leading" secondItem="48R-in-CZa" secondAttribute="leading" id="8SL-U3-IL7"/>
+                <constraint firstAttribute="trailing" secondItem="JFi-8R-zzt" secondAttribute="trailing" id="rdf-sa-PHU"/>
+                <constraint firstAttribute="bottom" secondItem="JFi-8R-zzt" secondAttribute="bottom" id="xis-5A-Pt8"/>
+            </constraints>
+            <size key="customSize" width="587" height="309"/>
+            <connections>
+                <outlet property="imageView" destination="69a-WU-xZo" id="StG-AT-I5D"/>
+                <outlet property="subtitleLabel" destination="7iT-sQ-IRG" id="M5v-1y-HM7"/>
+                <outlet property="titleLabel" destination="SmA-jh-5Aa" id="nMf-qO-xMk"/>
+            </connections>
+            <point key="canvasLocation" x="-221" y="73"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="13" width="640" height="960"/>
+    </resources>
+</document>

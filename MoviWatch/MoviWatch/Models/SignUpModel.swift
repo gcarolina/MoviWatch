@@ -1,5 +1,5 @@
 //
-//  UserModel.swift
+//  SignUpModel.swift
 //  MoviWatch
 //
 //  Created by Carolina on 14.03.23.
