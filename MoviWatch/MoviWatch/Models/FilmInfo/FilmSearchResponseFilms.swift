@@ -15,8 +15,8 @@ struct FilmSearchResponseFilms: Decodable {
     let year: String?
     let description: String?
     let filmLength: String?
-    let countries: Country?
-    let genres: Genre?
+    let countries: [Country]?
+    let genres: [Genre]?
     let rating: String?
     let posterUrl: String?
     let posterUrlPreview: String?

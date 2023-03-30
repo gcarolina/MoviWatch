@@ -55,7 +55,7 @@ final class SignUpViewController: UIViewController {
                 if let error = error {
                     self?.viewModel?.showAlert(title: "Error creating user", message: "\(error.localizedDescription)")
                 } else {
-                    self?.pushViewController(withIdentifier: "AppStoreViewController", viewControllerType: AppStoreViewController.self, storyboardName: "Main")
+                    self?.pushViewController(withIdentifier: "MainVC", viewControllerType: MainVC.self, storyboardName: "Main")
                 }
             }
         }
@@ -74,7 +74,7 @@ final class SignUpViewController: UIViewController {
     private func checkIfPersonIsRegistered() {
         let handle = viewModel?.addAuthStateDidChangeListener { [weak self] success in
             guard success else { return }
-            self?.pushViewController(withIdentifier: "AppStoreViewController", viewControllerType: AppStoreViewController.self, storyboardName: "Main")
+            self?.pushViewController(withIdentifier: "MainVC", viewControllerType: MainVC.self, storyboardName: "Main")
         }
     }
 }

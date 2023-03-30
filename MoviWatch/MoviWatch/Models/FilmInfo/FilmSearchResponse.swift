@@ -10,5 +10,5 @@ import Foundation
 struct FilmSearchResponse: Decodable {
     let keyword: String?
     let searchFilmsCountResult: Int?
-    let films: FilmSearchResponseFilms?
+    let films: [FilmSearchResponseFilms]?
 }

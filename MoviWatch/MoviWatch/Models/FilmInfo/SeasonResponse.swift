@@ -9,5 +9,5 @@ import Foundation
 
 struct SeasonResponse: Decodable {
     let total: Int?
-    let items: Season?
+    let items: [Season]?
 }

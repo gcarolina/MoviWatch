@@ -18,5 +18,5 @@ struct PersonResponse: Decodable {
     let age: Int?
     let hasAwards: Int?
     let profession: String?
-    let films: PersonResponseFilms?
+    let films: [PersonResponseFilms]?
 }

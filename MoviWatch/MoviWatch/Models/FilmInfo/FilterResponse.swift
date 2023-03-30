@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct FilterResponse: Decodable {
+struct FiltersResponse: Decodable {
     let genres: [FilterResponseGenres]?
 }

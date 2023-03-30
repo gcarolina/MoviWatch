@@ -10,5 +10,5 @@ import Foundation
 struct ImageResponse: Decodable {
     let total: Int?
     let totalPages: Int?
-    let items: ImageResponseItems?
+    let items: [ImageResponseItems]?
 }

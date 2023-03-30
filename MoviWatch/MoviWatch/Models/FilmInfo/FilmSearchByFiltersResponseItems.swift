@@ -8,13 +8,14 @@
 import Foundation
 
 struct FilmSearchByFiltersResponseItems: Decodable {
+    
     let kinopoiskId: Int
     let imdbId: String?
     let nameRu: String?
     let nameEn: String?
     let nameOriginal: String?
-    let countries: Country?
-    let genres: Genre?
+    let countries: [Country]?
+    let genres: [Genre]?
     let year: Int?
     let posterUrl: String?
     let posterUrlPreview: String?

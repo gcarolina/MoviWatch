@@ -10,5 +10,5 @@ import Foundation
 struct FilmSearchByFiltersResponse: Decodable {
     let total: Int?
     let totalPages: Int?
-    let items: FilmSearchByFiltersResponseItems?
+    let items: [FilmSearchByFiltersResponseItems]?
 }

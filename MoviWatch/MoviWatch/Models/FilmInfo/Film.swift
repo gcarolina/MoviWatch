@@ -20,8 +20,8 @@ struct Film: Decodable {
     let year: Int?
     let filmLength: Int?
     let description: String?
-    let countries: Country?
-    let genres: Genre?
+    let countries: [Country]?
+    let genres: [Genre]?
     let startYear: Int?
     let endYear: Int?
 }

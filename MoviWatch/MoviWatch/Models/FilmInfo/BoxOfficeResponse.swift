@@ -9,5 +9,5 @@ import Foundation
 
 struct BoxOfficeResponse: Decodable {
     let total: Int?
-    let items: BoxOffice?
+    let items: [BoxOffice]?
 }

@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import FirebaseAuth
 
 class TableViewController: UITableViewController {
 
-    var genres: FilterResponse?
+    var genres: FiltersResponse?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,21 @@ class TableViewController: UITableViewController {
     }
     override func viewDidAppear(_ animated: Bool) {
         fetchGenres()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // достаем текущего юзера
+        guard let currentUser = Auth.auth().currentUser else { return }
+        // сохраняем currentUser
+        let user = User(user: currentUser)
+        let ref = Database.database().reference(withPath: "users").child(String(user.userID))
+        // добавляем наблюдателя для получения значения из Firebase
+        ref.observeSingleEvent(of: .value) { [weak self] snapshot in
+            print(snapshot)
+            let model = UserName(snapshot: snapshot)
+            guard let namePerson = model?.name else { return }
+            self?.navigationItem.title = "Welcome, \(namePerson)!"
+        }
     }
 
     // MARK: - Table view data source
@@ -96,7 +113,7 @@ class TableViewController: UITableViewController {
             guard let data = data else { return }
             
             do {
-                self?.genres = try JSONDecoder().decode(FilterResponse.self, from: data)
+                self?.genres = try JSONDecoder().decode(FiltersResponse.self, from: data)
                 print(self?.genres ?? "")
             } catch {
                 print(error)

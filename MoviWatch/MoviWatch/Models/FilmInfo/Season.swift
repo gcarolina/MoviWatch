@@ -9,5 +9,5 @@ import Foundation
 
 struct Season: Decodable {
     let number: Int?
-    let episodes: Episode?
+    let episodes: [Episode]?
 }

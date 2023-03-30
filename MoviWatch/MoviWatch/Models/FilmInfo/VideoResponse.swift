@@ -9,5 +9,5 @@ import Foundation
 
 struct VideoResponse: Decodable {
     let total: Int?
-    let items: VideoResponseItems?
+    let items: [VideoResponseItems]?
 }
