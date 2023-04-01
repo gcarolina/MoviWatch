@@ -65,6 +65,8 @@
 		F1654E7629D5F20000722BCB /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1654E7429D5F20000722BCB /* CollectionReusableView.xib */; };
 		F19946CB29D5FC0B0023912C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19946C929D5FC0B0023912C /* CollectionViewCell.swift */; };
 		F19946CC29D5FC0B0023912C /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F19946CA29D5FC0B0023912C /* CollectionViewCell.xib */; };
+		F19946D329D645510023912C /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = F19946D229D645510023912C /* SkeletonView */; };
+		F19946D729D71EC20023912C /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19946D629D71EC20023912C /* ListSection.swift */; };
 		F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF82298ADB0200897C93 /* AppDelegate.swift */; };
 		F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */; };
 		F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF86298ADB0200897C93 /* SignUpViewController.swift */; };
@@ -117,6 +119,7 @@
 		F1654E7429D5F20000722BCB /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		F19946C929D5FC0B0023912C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F19946CA29D5FC0B0023912C /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		F19946D629D71EC20023912C /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
 		F1E7EF7F298ADB0200897C93 /* MoviWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7EF82298ADB0200897C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +137,7 @@
 			files = (
 				F15ED80C29C0A945008BCEA3 /* FirebasePerformance in Frameworks */,
 				F15ED80029C0A945008BCEA3 /* FirebaseDatabaseSwift in Frameworks */,
+				F19946D329D645510023912C /* SkeletonView in Frameworks */,
 				F15ED7F429C0A945008BCEA3 /* FirebaseAnalyticsSwift in Frameworks */,
 				F15ED80A29C0A945008BCEA3 /* FirebaseInstallations in Frameworks */,
 				F15ED7F629C0A945008BCEA3 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
@@ -222,13 +226,12 @@
 		F15D9E9229D1FFEB007CFD81 /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
+				F15D9EDF29D4BF71007CFD81 /* MainVC.swift */,
 				F19946C929D5FC0B0023912C /* CollectionViewCell.swift */,
 				F19946CA29D5FC0B0023912C /* CollectionViewCell.xib */,
-				F15D9EDF29D4BF71007CFD81 /* MainVC.swift */,
-				F15D9EE129D4C9BE007CFD81 /* CacheManager.swift */,
-				F15D9EE329D4C9D5007CFD81 /* NetworkService.swift */,
 				F1654E7329D5F20000722BCB /* CollectionReusableView.swift */,
 				F1654E7429D5F20000722BCB /* CollectionReusableView.xib */,
+				F19946D629D71EC20023912C /* ListSection.swift */,
 			);
 			path = AppStore;
 			sourceTree = "<group>";
@@ -289,6 +292,15 @@
 			path = "Main screen";
 			sourceTree = "<group>";
 		};
+		F19C7E6729D8DD8800442B00 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F15D9EE129D4C9BE007CFD81 /* CacheManager.swift */,
+				F15D9EE329D4C9D5007CFD81 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F1E7EF76298ADB0100897C93 = {
 			isa = PBXGroup;
 			children = (
@@ -311,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				F15BA88229BE540800289A0C /* Extension */,
+				F19C7E6729D8DD8800442B00 /* Services */,
 				F15ED80F29C0C945008BCEA3 /* Models */,
 				F15BA88529BE543900289A0C /* SignUp */,
 				F15ED7EB29C07D08008BCEA3 /* SignIn */,
@@ -361,6 +374,7 @@
 				F15ED80D29C0A945008BCEA3 /* FirebaseStorage */,
 				F15D9EAD29D23BDE007CFD81 /* Alamofire */,
 				F15D9EB029D23C54007CFD81 /* AlamofireImage */,
+				F19946D229D645510023912C /* SkeletonView */,
 			);
 			productName = MoviWatch;
 			productReference = F1E7EF7F298ADB0200897C93 /* MoviWatch.app */;
@@ -394,6 +408,7 @@
 				F15ED7F029C0A945008BCEA3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				F15D9EAC29D23BDE007CFD81 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				F15D9EAF29D23C53007CFD81 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				F19946D129D645510023912C /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = F1E7EF80298ADB0200897C93 /* Products */;
 			projectDirPath = "";
@@ -470,6 +485,7 @@
 				F15D9EC229D2DDF4007CFD81 /* Country.swift in Sources */,
 				F15D9EBA29D2DA2E007CFD81 /* Episode.swift in Sources */,
 				F15D9EDA29D31477007CFD81 /* TableViewController.swift in Sources */,
+				F19946D729D71EC20023912C /* ListSection.swift in Sources */,
 				F15D9EDE29D33483007CFD81 /* FilterResponse.swift in Sources */,
 				F15D9ED629D2F4FD007CFD81 /* FilmSearchByFiltersResponse.swift in Sources */,
 				F15D9EE029D4BF71007CFD81 /* MainVC.swift in Sources */,
@@ -752,6 +768,14 @@
 				minimumVersion = 10.6.0;
 			};
 		};
+		F19946D129D645510023912C /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.30.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -839,6 +863,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = F15ED7F029C0A945008BCEA3 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		F19946D229D645510023912C /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F19946D129D645510023912C /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

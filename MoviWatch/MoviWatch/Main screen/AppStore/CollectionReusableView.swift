@@ -9,6 +9,8 @@ import UIKit
 
 class CollectionReusableView: UICollectionReusableView {
 
+    static let reuseIdentifier = "CollectionReusableView"
+    
     @IBOutlet weak var cellTitleLabel: UILabel!
     
     func setup(_ title: String) {
