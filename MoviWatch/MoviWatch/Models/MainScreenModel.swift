@@ -12,16 +12,14 @@ struct UserName {
     
     // MARK: - Internal
     let name: String
-    let ref: DatabaseReference? // Reference к конкретной записи в DB
+    let ref: DatabaseReference?
     
     // MARK: - Lifecycle
-    // для создания объекта локально
     init(name: String, userID: String) {
         self.name = name
         self.ref = nil
     }
-    // для создания объекта из сети
-    init?(snapshot: DataSnapshot) { // DataSnapshot - снимок иерархии DB
+    init?(snapshot: DataSnapshot) {
         guard let snapshotValue = snapshot.value as? [String: Any],
               let name = snapshotValue[Constants.nameKey] as? String else { return nil }
         self.name = name

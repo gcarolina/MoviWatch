@@ -7,54 +7,6 @@
 
 import Foundation
 
-struct ListCellModel {
-    let kinopoiskId: Int
-    let title: String
-    let image: String
-}
-
-enum ListSection {
-    case thriller([ListCellModel])
-        case drama([ListCellModel])
-        case crime([ListCellModel])
-        case melodrama([ListCellModel])
-        case detective([ListCellModel])
-        case fantasy([ListCellModel])
-    
-    var items: [ListCellModel] {
-        switch self {
-        case .thriller(let items),
-                .drama(let items),
-                .crime(let items),
-                .melodrama(let items),
-                .detective(let items),
-                .fantasy(let items):
-            return items
-        }
-    }
-    
-    var count: Int {
-        return items.count
-    }
-    
-    var title: String {
-        switch self {
-        case .thriller:
-            return "Триллер"
-        case .drama:
-            return "Драма"
-        case .crime:
-            return "Криминал"
-        case .melodrama:
-            return "Мелодрама"
-        case .detective:
-            return "Детектив"
-        case .fantasy:
-            return "Фентези"
-        }
-    }
-}
-
 struct FilmsForGenres {
     static let shared = FilmsForGenres()
 

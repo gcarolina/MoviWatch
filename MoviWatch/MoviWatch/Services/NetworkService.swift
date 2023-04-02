@@ -10,7 +10,7 @@ import Alamofire
 import AlamofireImage
 import SwiftyJSON
 
-class NetworkService {
+final class NetworkService {
     static func getPhoto(imageURL: String,
                          callback: @escaping (_ image: UIImage?, _ error: Error?) -> Void) {
         

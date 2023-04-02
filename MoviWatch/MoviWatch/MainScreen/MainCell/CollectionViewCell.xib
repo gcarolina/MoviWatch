@@ -25,7 +25,7 @@
                             <fragment content="label">
                                 <attributes>
                                     <color key="NSColor" red="0.70196078429999997" green="0.15686274510000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <font key="NSFont" size="15" name="HoeflerText-Black"/>
+                                    <font key="NSFont" size="16" name="HoeflerText-Black"/>
                                     <font key="NSOriginalFont" size="16" name="Farah"/>
                                     <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                 </attributes>

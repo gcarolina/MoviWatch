@@ -6,11 +6,12 @@
 //
 
 import Foundation
-
+// MARK: - CollectionReusableViewProtocol
 protocol CollectionReusableViewProtocol {
     var title: String { get }
 }
 
+// MARK: - CollectionReusableViewModel
 final class CollectionReusableViewModel: CollectionReusableViewProtocol {
     internal let title: String
     
