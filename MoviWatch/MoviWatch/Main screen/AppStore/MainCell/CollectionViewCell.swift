@@ -10,12 +10,12 @@ import SkeletonView
 import Alamofire
 import AlamofireImage
 
-class CollectionViewCell: UICollectionViewCell {
+final class CollectionViewCell: UICollectionViewCell {
     
     static let reuseIdentifier = "CollectionViewCell"
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var filmName: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var filmName: UILabel!
     
     var viewModel: CollectionViewModelCellProtocol? {
         didSet {

@@ -11,8 +11,8 @@ protocol CollectionReusableViewProtocol {
     var title: String { get }
 }
 
-class CollectionReusableViewModel: CollectionReusableViewProtocol {
-    let title: String
+final class CollectionReusableViewModel: CollectionReusableViewProtocol {
+    internal let title: String
     
     init(title: String) {
         self.title = title

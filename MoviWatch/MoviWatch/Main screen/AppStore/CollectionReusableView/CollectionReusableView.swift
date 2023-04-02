@@ -7,11 +7,11 @@
 
 import UIKit
 
-class CollectionReusableView: UICollectionReusableView {
+final class CollectionReusableView: UICollectionReusableView {
 
     static let reuseIdentifier = "CollectionReusableView"
     
-    @IBOutlet weak var cellTitleLabel: UILabel!
+    @IBOutlet private weak var cellTitleLabel: UILabel!
     
     var viewModel: CollectionReusableViewModel? {
         didSet {

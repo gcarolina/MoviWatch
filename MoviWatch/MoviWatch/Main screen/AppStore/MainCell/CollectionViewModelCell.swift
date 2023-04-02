@@ -7,25 +7,25 @@
 
 import UIKit
 
-// MARK: - TableViewCellViewModelProtocol
-
+// MARK: - CollectionViewModelCellProtocol
 protocol CollectionViewModelCellProtocol {
     var filmName: String { get }
     func getImage(completion: @escaping (UIImage?) -> Void)
 }
 
-class CollectionViewCellViewModel: CollectionViewModelCellProtocol {
-    let item: ListCellModel
+// MARK: - CollectionViewModelCell
+final class CollectionViewCellViewModel: CollectionViewModelCellProtocol {
+    private let item: ListCellModel
     
     init(item: ListCellModel) {
         self.item = item
     }
     
-    var filmName: String {
+    internal var filmName: String {
         return item.title
     }
     
-    func getImage(completion: @escaping (UIImage?) -> Void) {
+    internal func getImage(completion: @escaping (UIImage?) -> Void) {
         NetworkService.getPhoto(imageURL: item.image) { image, error in
             completion(image)
         }
