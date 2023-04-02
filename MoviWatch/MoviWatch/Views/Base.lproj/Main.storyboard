@@ -553,6 +553,36 @@
             </objects>
             <point key="canvasLocation" x="8405" y="-19"/>
         </scene>
+        <!--Film View Controller-->
+        <scene sceneID="h4L-Ar-1Kl">
+            <objects>
+                <viewController storyboardIdentifier="FilmViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="krb-1C-qy4" customClass="FilmViewController" customModule="MoviWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6XC-3v-Owp">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ao5-Hd-DEg">
+                                <rect key="frame" x="172.66666666666666" y="426.66666666666669" width="48" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.70196078429999997" green="0.15686274510000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N1J-AF-I1D"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ao5-Hd-DEg" firstAttribute="centerY" secondItem="N1J-AF-I1D" secondAttribute="centerY" id="Hcf-wI-L0t"/>
+                            <constraint firstItem="ao5-Hd-DEg" firstAttribute="centerX" secondItem="N1J-AF-I1D" secondAttribute="centerX" id="zok-B3-Cpd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="filmDescription" destination="ao5-Hd-DEg" id="gnT-OL-wb8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fm8-ux-QdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9283" y="-19"/>
+        </scene>
         <!--Table View Controller-->
         <scene sceneID="H5t-sO-COy">
             <objects>
@@ -591,7 +621,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9E-rV-Kmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9444" y="-11"/>
+            <point key="canvasLocation" x="10427" y="-29"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Wh-0L-rGi">

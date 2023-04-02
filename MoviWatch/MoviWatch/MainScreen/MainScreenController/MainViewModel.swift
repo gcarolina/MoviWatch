@@ -13,6 +13,7 @@ protocol MainViewModelProtocol {
     var sections: [Section] { get }
     func createLayout() -> UICollectionViewCompositionalLayout
     func getUserName(completion: @escaping (String?) -> Void)
+    func didSelectFilm(at indexPath: IndexPath, navigationController: UINavigationController?, storyboardName: String)
 }
 
 final class MainViewModel: MainViewModelProtocol {
@@ -61,6 +62,25 @@ final class MainViewModel: MainViewModelProtocol {
             DispatchQueue.main.async {
                 completion(namePerson)
             }
+        }
+    }
+    
+    func film(at indexPath: IndexPath) -> ListCellModel {
+        return filmsForGenres.pageData[indexPath.section].items[indexPath.row]
+    }
+    
+    func didSelectFilm(at indexPath: IndexPath, navigationController: UINavigationController?, storyboardName: String) {
+        let kinopoiskId = film(at: indexPath).kinopoiskId
+        pushViewController(withIdentifier: "FilmViewController", viewControllerType: FilmViewController.self, storyboardName: storyboardName, navigationController: navigationController, configureViewController: { viewController in
+            viewController.id = kinopoiskId
+        })
+    }
+        
+    private func pushViewController<T: UIViewController>(withIdentifier identifier: String, viewControllerType: T.Type, storyboardName: String, navigationController: UINavigationController?, configureViewController: ((T) -> Void)?) {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T {
+            configureViewController?(viewController)
+            navigationController?.pushViewController(viewController, animated: true)
         }
     }
 }

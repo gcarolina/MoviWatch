@@ -61,7 +61,7 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
         cell.viewModel = viewModel
         return cell
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
@@ -73,5 +73,9 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
         default:
             return UICollectionReusableView()
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        mainViewModel?.didSelectFilm(at: indexPath, navigationController: navigationController, storyboardName: "Main")
     }
 }

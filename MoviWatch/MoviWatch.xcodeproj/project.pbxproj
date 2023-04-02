@@ -72,6 +72,7 @@
 		F19C7E6F29D9D66100442B00 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C7E6E29D9D66100442B00 /* MainViewModel.swift */; };
 		F19C7E7129D9E72300442B00 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C7E7029D9E72300442B00 /* SectionModel.swift */; };
 		F19C7E7329D9F2C400442B00 /* ListCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C7E7229D9F2C400442B00 /* ListCellModel.swift */; };
+		F19C7E7629D9F7A600442B00 /* FilmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C7E7529D9F7A600442B00 /* FilmViewController.swift */; };
 		F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF82298ADB0200897C93 /* AppDelegate.swift */; };
 		F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */; };
 		F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF86298ADB0200897C93 /* SignUpViewController.swift */; };
@@ -130,6 +131,7 @@
 		F19C7E6E29D9D66100442B00 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		F19C7E7029D9E72300442B00 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		F19C7E7229D9F2C400442B00 /* ListCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCellModel.swift; sourceTree = "<group>"; };
+		F19C7E7529D9F7A600442B00 /* FilmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmViewController.swift; sourceTree = "<group>"; };
 		F1E7EF7F298ADB0200897C93 /* MoviWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7EF82298ADB0200897C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -332,6 +334,14 @@
 			path = MainCollectionSection;
 			sourceTree = "<group>";
 		};
+		F19C7E7429D9F78500442B00 /* Film */ = {
+			isa = PBXGroup;
+			children = (
+				F19C7E7529D9F7A600442B00 /* FilmViewController.swift */,
+			);
+			path = Film;
+			sourceTree = "<group>";
+		};
 		F1E7EF76298ADB0100897C93 = {
 			isa = PBXGroup;
 			children = (
@@ -359,6 +369,7 @@
 				F15BA88529BE543900289A0C /* SignUp */,
 				F15ED7EB29C07D08008BCEA3 /* SignIn */,
 				F15ED81829C3564B008BCEA3 /* MainScreen */,
+				F19C7E7429D9F78500442B00 /* Film */,
 				F15BA88629BE545D00289A0C /* Views */,
 				F139707129B66F4600F677DE /* LaunchScreen */,
 				F139707029B66F3300F677DE /* Delegates */,
@@ -556,6 +567,7 @@
 				F1654E7529D5F20000722BCB /* CollectionReusableView.swift in Sources */,
 				F15D9EE429D4C9D5007CFD81 /* NetworkService.swift in Sources */,
 				F15D9ED829D2F53B007CFD81 /* FilmSearchByFiltersResponseItems.swift in Sources */,
+				F19C7E7629D9F7A600442B00 /* FilmViewController.swift in Sources */,
 				F15D9ECC29D2E633007CFD81 /* PersonResponseFilms.swift in Sources */,
 				F1630F0829C7B9B700F40978 /* SignInViewModel.swift in Sources */,
 				F19C7E6F29D9D66100442B00 /* MainViewModel.swift in Sources */,

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Film: Decodable {
-    let kinopoiskId: Int
+    var kinopoiskId: Int
     let nameRu: String?
     let nameOriginal: String?
     let posterUrl: String?
