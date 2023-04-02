@@ -66,7 +66,9 @@
 		F19946CB29D5FC0B0023912C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19946C929D5FC0B0023912C /* CollectionViewCell.swift */; };
 		F19946CC29D5FC0B0023912C /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F19946CA29D5FC0B0023912C /* CollectionViewCell.xib */; };
 		F19946D329D645510023912C /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = F19946D229D645510023912C /* SkeletonView */; };
-		F19946D729D71EC20023912C /* ListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19946D629D71EC20023912C /* ListSection.swift */; };
+		F19946D729D71EC20023912C /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19946D629D71EC20023912C /* MainModel.swift */; };
+		F19C7E6A29D99C6A00442B00 /* CollectionViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C7E6929D99C6A00442B00 /* CollectionViewModelCell.swift */; };
+		F19C7E6D29D9C3A400442B00 /* CollectionReusableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C7E6C29D9C3A400442B00 /* CollectionReusableViewModel.swift */; };
 		F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF82298ADB0200897C93 /* AppDelegate.swift */; };
 		F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */; };
 		F1E7EF87298ADB0200897C93 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1E7EF86298ADB0200897C93 /* SignUpViewController.swift */; };
@@ -119,7 +121,9 @@
 		F1654E7429D5F20000722BCB /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		F19946C929D5FC0B0023912C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F19946CA29D5FC0B0023912C /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
-		F19946D629D71EC20023912C /* ListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListSection.swift; sourceTree = "<group>"; };
+		F19946D629D71EC20023912C /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		F19C7E6929D99C6A00442B00 /* CollectionViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModelCell.swift; sourceTree = "<group>"; };
+		F19C7E6C29D9C3A400442B00 /* CollectionReusableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableViewModel.swift; sourceTree = "<group>"; };
 		F1E7EF7F298ADB0200897C93 /* MoviWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1E7EF82298ADB0200897C93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1E7EF84298ADB0200897C93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -227,11 +231,9 @@
 			isa = PBXGroup;
 			children = (
 				F15D9EDF29D4BF71007CFD81 /* MainVC.swift */,
-				F19946C929D5FC0B0023912C /* CollectionViewCell.swift */,
-				F19946CA29D5FC0B0023912C /* CollectionViewCell.xib */,
-				F1654E7329D5F20000722BCB /* CollectionReusableView.swift */,
-				F1654E7429D5F20000722BCB /* CollectionReusableView.xib */,
-				F19946D629D71EC20023912C /* ListSection.swift */,
+				F19946D629D71EC20023912C /* MainModel.swift */,
+				F19C7E6829D99C4900442B00 /* MainCell */,
+				F19C7E6B29D9BF7400442B00 /* CollectionReusableView */,
 			);
 			path = AppStore;
 			sourceTree = "<group>";
@@ -299,6 +301,26 @@
 				F15D9EE329D4C9D5007CFD81 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F19C7E6829D99C4900442B00 /* MainCell */ = {
+			isa = PBXGroup;
+			children = (
+				F19946CA29D5FC0B0023912C /* CollectionViewCell.xib */,
+				F19946C929D5FC0B0023912C /* CollectionViewCell.swift */,
+				F19C7E6929D99C6A00442B00 /* CollectionViewModelCell.swift */,
+			);
+			path = MainCell;
+			sourceTree = "<group>";
+		};
+		F19C7E6B29D9BF7400442B00 /* CollectionReusableView */ = {
+			isa = PBXGroup;
+			children = (
+				F1654E7429D5F20000722BCB /* CollectionReusableView.xib */,
+				F1654E7329D5F20000722BCB /* CollectionReusableView.swift */,
+				F19C7E6C29D9C3A400442B00 /* CollectionReusableViewModel.swift */,
+			);
+			path = CollectionReusableView;
 			sourceTree = "<group>";
 		};
 		F1E7EF76298ADB0100897C93 = {
@@ -485,11 +507,12 @@
 				F15D9EC229D2DDF4007CFD81 /* Country.swift in Sources */,
 				F15D9EBA29D2DA2E007CFD81 /* Episode.swift in Sources */,
 				F15D9EDA29D31477007CFD81 /* TableViewController.swift in Sources */,
-				F19946D729D71EC20023912C /* ListSection.swift in Sources */,
+				F19946D729D71EC20023912C /* MainModel.swift in Sources */,
 				F15D9EDE29D33483007CFD81 /* FilterResponse.swift in Sources */,
 				F15D9ED629D2F4FD007CFD81 /* FilmSearchByFiltersResponse.swift in Sources */,
 				F15D9EE029D4BF71007CFD81 /* MainVC.swift in Sources */,
 				F15ED7E429C06EAC008BCEA3 /* UITextFieldExt.swift in Sources */,
+				F19C7E6A29D99C6A00442B00 /* CollectionViewModelCell.swift in Sources */,
 				F15ED7EA29C0780C008BCEA3 /* UIScrollViewExt.swift in Sources */,
 				F15D9EDC29D3176A007CFD81 /* FilterResponseGenres.swift in Sources */,
 				F15D9EBE29D2DBFE007CFD81 /* BoxOffice.swift in Sources */,
@@ -500,6 +523,7 @@
 				F15BA88429BE542200289A0C /* UIColorExt.swift in Sources */,
 				F15D9EC629D2DF18007CFD81 /* FilmSearchResponse.swift in Sources */,
 				F15ED7ED29C07D32008BCEA3 /* SignInViewController.swift in Sources */,
+				F19C7E6D29D9C3A400442B00 /* CollectionReusableViewModel.swift in Sources */,
 				F1E7EF83298ADB0200897C93 /* AppDelegate.swift in Sources */,
 				F15D9ED229D2E818007CFD81 /* VideoResponse.swift in Sources */,
 				F15ED7E829C07206008BCEA3 /* UIViewControllerExt.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  ListSection.swift
+//  MainModel.swift
 //  MoviWatch
 //
 //  Created by Carolina on 31.03.23.

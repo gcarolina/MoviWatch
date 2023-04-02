@@ -13,7 +13,14 @@ class CollectionReusableView: UICollectionReusableView {
     
     @IBOutlet weak var cellTitleLabel: UILabel!
     
-    func setup(_ title: String) {
-        cellTitleLabel.text = title
+    var viewModel: CollectionReusableViewModel? {
+        didSet {
+            configure()
+        }
+    }
+    
+    func configure() {
+        guard let viewModel = viewModel else { return }
+        cellTitleLabel.text = viewModel.cellTitle
     }
 }
