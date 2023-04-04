@@ -44,7 +44,7 @@ final class SignInViewController: UIViewController {
     private func setUpUI(){
         emailTF.applyTextFieldStyle(placeholderName: UserText.email.rawValue)
         passwordTF.applyTextFieldStyle(placeholderName: UserText.password.rawValue)
-        signUpBtn.setButtonStyle()
+        signUpBtn.setButtonStyle(shadowOpacity: 1.0)
     }
     
     @IBAction func signUpAction() {

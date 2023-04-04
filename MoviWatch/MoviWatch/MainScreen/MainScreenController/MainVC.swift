@@ -9,8 +9,6 @@ import UIKit
 
 final class MainVC: UIViewController {
     private var mainViewModel: MainViewModelProtocol?
-    
-    private let sections = FilmsForGenres.shared.pageData
     private var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -19,10 +17,11 @@ final class MainVC: UIViewController {
         setUpCollectionView(backgroundRed: 18, backgroundGreen: 18, backgroundBlue: 18)
     }
     
-    override func viewWillAppear(_ animated: Bool) { mainViewModel?.getUserName(completion: { [weak self] name in
+    override func viewWillAppear(_ animated: Bool) {
+        mainViewModel?.getUserName(completion: { [weak self] name in
         guard let name = name else { return }
         self?.navigationItem.title = "Welcome, \(name)!"
-    })
+        })
     }
     
     private func setUpCollectionView(backgroundRed: Int, backgroundGreen: Int, backgroundBlue: Int) {

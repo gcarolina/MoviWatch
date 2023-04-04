@@ -42,10 +42,10 @@ final class SignUpViewController: UIViewController {
     }
     
     private func setUpUI(){
-        nameTextField.applyTextFieldStyle(placeholderName: UserText.profileName.rawValue )
+        nameTextField.applyTextFieldStyle(placeholderName: UserText.profileName.rawValue)
         emailTextField.applyTextFieldStyle(placeholderName: UserText.email.rawValue)
         passwordTextField.applyTextFieldStyle(placeholderName: UserText.password.rawValue)
-        logInButton.setButtonStyle()
+        logInButton.setButtonStyle(shadowOpacity: 1.0)
     }
     
     @IBAction func continueButtonAction() {

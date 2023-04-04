@@ -26,21 +26,6 @@ class TableViewController: UITableViewController {
         fetchGenres()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        // достаем текущего юзера
-        guard let currentUser = Auth.auth().currentUser else { return }
-        // сохраняем currentUser
-        let user = User(user: currentUser)
-        let ref = Database.database().reference(withPath: "users").child(String(user.userID))
-        // добавляем наблюдателя для получения значения из Firebase
-        ref.observeSingleEvent(of: .value) { [weak self] snapshot in
-            print(snapshot)
-            let model = UserName(snapshot: snapshot)
-            guard let namePerson = model?.name else { return }
-            self?.navigationItem.title = "Welcome, \(namePerson)!"
-        }
-    }
-
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
