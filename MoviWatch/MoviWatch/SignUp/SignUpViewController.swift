@@ -72,7 +72,7 @@ final class SignUpViewController: UIViewController {
     }
     
     private func checkIfPersonIsRegistered() {
-        let handle = viewModel?.addAuthStateDidChangeListener { [weak self] success in
+        _ = viewModel?.addAuthStateDidChangeListener { [weak self] success in
             guard success else { return }
             self?.pushViewController(withIdentifier: "MainVC", viewControllerType: MainVC.self, storyboardName: "Main")
         }

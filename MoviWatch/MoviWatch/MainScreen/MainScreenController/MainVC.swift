@@ -8,6 +8,7 @@
 import UIKit
 
 final class MainVC: UIViewController {
+    
     private var mainViewModel: MainViewModelProtocol?
     private var collectionView: UICollectionView!
     
@@ -20,6 +21,7 @@ final class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         mainViewModel?.getUserName(completion: { [weak self] name in
         guard let name = name else { return }
+            //вынести в стурктуру (в строки)
         self?.navigationItem.title = "Welcome, \(name)!"
         })
     }
@@ -34,10 +36,13 @@ final class MainVC: UIViewController {
         collectionView.delegate = self
         
         let filmCellNib = UINib(nibName: CollectionViewCell.reuseIdentifier, bundle: nil)
-        collectionView.register(filmCellNib, forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
+        collectionView.register(filmCellNib,
+                                forCellWithReuseIdentifier: CollectionViewCell.reuseIdentifier)
         
         let headerNib = UINib(nibName: CollectionReusableView.reuseIdentifier, bundle: nil)
-        collectionView.register(headerNib, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CollectionReusableView.reuseIdentifier)
+        collectionView.register(headerNib,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: CollectionReusableView.reuseIdentifier)
         
         guard let layout = mainViewModel?.createLayout() else { return }
         collectionView.collectionViewLayout = layout
@@ -54,20 +59,23 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier, for: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.reuseIdentifier,
+                                                      for: indexPath) as! CollectionViewCell
         guard let item = mainViewModel?.sections[indexPath.section].items[indexPath.row] else { return UICollectionViewCell() }
-        let viewModel = CollectionViewCellViewModel(item: item)
-        cell.viewModel = viewModel
+        let collectionCellViewModel = CollectionViewCellViewModel(item: item)
+        cell.viewModel = collectionCellViewModel
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
-            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CollectionReusableView.reuseIdentifier, for: indexPath) as! CollectionReusableView
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                         withReuseIdentifier: CollectionReusableView.reuseIdentifier,
+                                                                         for: indexPath) as! CollectionReusableView
             let title = mainViewModel?.sections[indexPath.section].title ?? ""
-            let viewModel = CollectionReusableViewModel(title: title)
-            header.viewModel = viewModel
+            let sectionHeaderViewModel = CollectionReusableViewModel(title: title)
+            header.viewModel = sectionHeaderViewModel
             return header
         default:
             return UICollectionReusableView()
@@ -75,6 +83,6 @@ extension MainVC: UICollectionViewDataSource, UICollectionViewDelegate {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        mainViewModel?.didSelectFilm(at: indexPath, navigationController: navigationController, storyboardName: "Main")
+        mainViewModel?.isSelectedFilm(at: indexPath, navigationController: navigationController, storyboardName: "Main")
     }
 }

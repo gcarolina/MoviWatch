@@ -495,7 +495,7 @@
         <!--Collection View Controller-->
         <scene sceneID="0j4-fK-Euj">
             <objects>
-                <collectionViewController id="sFQ-zf-hJE" sceneMemberID="viewController">
+                <collectionViewController id="sFQ-zf-hJE" customClass="CollectionViewController" customModule="MoviWatch" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uPp-Di-m0I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -515,7 +515,7 @@
                             </connections>
                         </searchBar>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NEb-fE-zuI">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCollectionViewCell" id="NEb-fE-zuI">
                                 <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5Dt-mv-S88">
@@ -529,6 +529,10 @@
                             <outlet property="delegate" destination="sFQ-zf-hJE" id="jzh-2S-Z4b"/>
                         </connections>
                     </collectionView>
+                    <connections>
+                        <outlet property="searchBar" destination="Acv-KO-NfR" id="Ls7-uu-sB2"/>
+                        <outlet property="searchCollectionView" destination="uPp-Di-m0I" id="iZ0-Yh-VIm"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zvb-i4-NSD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

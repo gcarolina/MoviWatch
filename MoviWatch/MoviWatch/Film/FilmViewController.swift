@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SkeletonView
 
 final class FilmViewController: UIViewController {
     private var filmViewModel: FilmViewModelProtocol?
@@ -32,20 +31,18 @@ final class FilmViewController: UIViewController {
         
         guard let id = id else { return }
         loadFilmData(kinopoiskId: id)
-        fetchPhoto(kinopoiskId: id)
+        loadFilmImages(kinopoiskId: id)
     }
     
     override func viewDidLayoutSubviews() {
         setUpUI()
     }
-    
     // MARK: - @IBAction
     @IBAction private func openBrowser(_ sender: UIButton) {
         if let url = URL(string: film?.webUrl ?? "") {
             UIApplication.shared.open(url)
         }
     }
-    
     // MARK: - Private functions
     private func setUpUI() {
         filmGenre.setCornerRadius()
@@ -81,7 +78,7 @@ final class FilmViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    func loadFilmData(kinopoiskId: Int) {
+    private func loadFilmData(kinopoiskId: Int) {
         filmViewModel?.fetchFilm(kinopoiskId: kinopoiskId) { [weak self] result in
             switch result {
             case .success(let film):
@@ -98,74 +95,16 @@ final class FilmViewController: UIViewController {
         }
     }
     
-    private func fetchPhoto(kinopoiskId: Int) {
-        guard let url = URL(string: "https://kinopoiskapiunofficial.tech/api/v2.2/films/\(kinopoiskId)/images?type=STILL&page=1") else { return }
-        var request = URLRequest(url: url)
-        request.addValue("1bcbd78e-ca5b-4ba6-a840-e482764b60ef", forHTTPHeaderField: "X-API-KEY")
-        
-        let task = URLSession.shared.dataTask(with: request) { [weak self] data, response, error in
-            
+    private func loadFilmImages(kinopoiskId: Int) {
+        filmViewModel?.fetchPhotos(kinopoiskId: kinopoiskId) { [weak self] imagesArray, error in
             if let error = error {
-                print("Error: \(error.localizedDescription)")
-                return
+                print(error.localizedDescription)
             }
-            
-            guard let httpResponse = response as? HTTPURLResponse,
-                  (200...299).contains(httpResponse.statusCode) else {
-                print("Unexpected response status code")
-                return
-            }
-            
-            guard let data = data else { return }
-            
-            do {
-                let filmResponse = try JSONDecoder().decode(ImageResponse.self, from: data)
-                self?.image = filmResponse
-            } catch {
-                print(error)
-            }
-            print("Response: \(String(data: data, encoding: .utf8)!)")
-            DispatchQueue.main.async {
-                self?.getPhotos(imageResponseItems: self?.image?.items)
-            }
-        }
-        task.resume()
-    }
-    
-    private func getPhotos(imageResponseItems: [ImageResponseItems]?) {
-        guard let imageResponseItems = imageResponseItems else { return }
-        
-        var imagesArray = [UIImage]()
-        let dispatchGroup = DispatchGroup()
-        for imageResponseItem in imageResponseItems {
-            guard let imageURLString = imageResponseItem.imageUrl else { continue }
-            
-            dispatchGroup.enter()
-            NetworkService.getPhoto(imageURL: imageURLString) { image, error in
-                defer { dispatchGroup.leave() }
-                if let error = error {
-                    print("Failed to load image with URL: \(imageURLString). Error: \(error.localizedDescription)")
-                    return
-                }
-                guard let image = image else { return }
-                imagesArray.append(image)
-            }
-        }
-        
-        dispatchGroup.notify(queue: DispatchQueue.main) { [weak self] in
             self?.filmImage.animationImages = imagesArray
             self?.filmImage.animationDuration = 35
             self?.filmImage.animationRepeatCount = 0
             self?.filmImage.startAnimating()
             self?.activityIndicator.stopAnimating()
-        }
-    }
-    
-    private func getPhoto(imageURL: String?) {
-        guard let imageURL = imageURL else { return }
-        
-        NetworkService.getPhoto(imageURL: imageURL) { [weak self] image, error in
-            self?.filmImage.image = image
         }
     }
 }

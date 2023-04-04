@@ -210,6 +210,13 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
+		F142EFB629DCC2D00000BD36 /* SearchVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchVC;
+			sourceTree = "<group>";
+		};
 		F15BA88229BE540800289A0C /* Extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +383,7 @@
 				F15ED7EB29C07D08008BCEA3 /* SignIn */,
 				F15ED81829C3564B008BCEA3 /* MainScreen */,
 				F19C7E7429D9F78500442B00 /* Film */,
+				F142EFB629DCC2D00000BD36 /* SearchVC */,
 				F15BA88629BE545D00289A0C /* Views */,
 				F139707129B66F4600F677DE /* LaunchScreen */,
 				F139707029B66F3300F677DE /* Delegates */,
