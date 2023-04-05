@@ -28,4 +28,12 @@ extension UIViewController: UITextFieldDelegate {
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }
+    
+    func pushSearchViewController<T: UIViewController>(withIdentifier identifier: String, viewControllerType: T.Type, storyboardName: String, configureViewController: ((T) -> Void)?) {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        if let viewController = storyboard.instantiateViewController(withIdentifier: identifier) as? T {
+            configureViewController?(viewController)
+            self.navigationController?.pushViewController(viewController, animated: true)
+        }
+    }
 }

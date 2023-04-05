@@ -552,10 +552,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="filmImagePreview" destination="DcJ-o1-xHY" id="kS9-Ue-igz"/>
-                                            <outlet property="lengthLabel" destination="bvM-iE-djg" id="EmI-jS-dYn"/>
-                                            <outlet property="titleLabel" destination="rRe-Cf-y6x" id="Uhg-cX-xn9"/>
-                                            <outlet property="yearLabel" destination="EEX-fL-ZNb" id="Rqe-ge-khd"/>
+                                            <outlet property="movieLengthLabel" destination="bvM-iE-djg" id="2F9-kO-cEe"/>
+                                            <outlet property="moviePosterImageView" destination="DcJ-o1-xHY" id="iXY-4P-7GI"/>
+                                            <outlet property="movieReleaseYearLabel" destination="EEX-fL-ZNb" id="vBy-ae-uVk"/>
+                                            <outlet property="movieTitleLabel" destination="rRe-Cf-y6x" id="4K5-Jx-Ybt"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -744,7 +744,7 @@
                                                                             <color key="baseForegroundColor" red="0.53333333329999999" green="0.53333333329999999" blue="0.53333333329999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
-                                                                            <action selector="openBrowser:" destination="krb-1C-qy4" eventType="touchUpInside" id="JMu-f7-cei"/>
+                                                                            <action selector="openBrowser:" destination="krb-1C-qy4" eventType="touchUpInside" id="Mfl-yT-ClB"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>

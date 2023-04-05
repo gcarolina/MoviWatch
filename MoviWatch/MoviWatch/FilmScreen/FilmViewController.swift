@@ -39,9 +39,9 @@ final class FilmViewController: UIViewController {
     }
     // MARK: - @IBAction
     @IBAction private func openBrowser(_ sender: UIButton) {
-        if let url = URL(string: film?.webUrl ?? "") {
-            UIApplication.shared.open(url)
-        }
+        guard let url = URL(string: film?.webUrl ?? "") else { return }
+        print(url)
+        UIApplication.shared.open(url)
     }
     // MARK: - Private functions
     private func setUpUI() {
@@ -83,6 +83,7 @@ final class FilmViewController: UIViewController {
             switch result {
             case .success(let film):
                 DispatchQueue.main.async {
+                    self?.film = film
                     self?.filmName.text = film.nameRu
                     self?.filmGenre.text = film.genres?[0].genre
                     self?.filmYear.text = film.year?.description
