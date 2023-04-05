@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -476,67 +475,34 @@
             </objects>
             <point key="canvasLocation" x="5695" y="-319"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="xVH-jE-Wa5">
+        <!--Search Table View Controller-->
+        <scene sceneID="aLK-BB-BIY">
             <objects>
-                <viewController id="bzm-JA-524" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jX5-7F-11W">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="7vR-fu-H1B"/>
-                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="X2t-H9-gYR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Os9-jN-MBF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="8510.6870229007636" y="-744.36619718309862"/>
-        </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="0j4-fK-Euj">
-            <objects>
-                <collectionViewController id="sFQ-zf-hJE" customClass="CollectionViewController" customModule="MoviWatch" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="uPp-Di-m0I">
+                <tableViewController storyboardIdentifier="SearchTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wSZ-LS-wcv" customClass="SearchTableViewController" customModule="MoviWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="3jP-hl-7Ex">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aFH-HJ-BHm">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <searchBar key="backgroundView" contentMode="redraw" id="Acv-KO-NfR">
-                            <rect key="frame" x="0.0" y="-59" width="393" height="852"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits"/>
-                            <connections>
-                                <outlet property="delegate" destination="sFQ-zf-hJE" id="U2x-8F-4FW"/>
-                            </connections>
-                        </searchBar>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCollectionViewCell" id="NEb-fE-zuI">
-                                <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5Dt-mv-S88">
-                                    <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="u1C-vD-QQK">
+                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u1C-vD-QQK" id="JiM-Mr-YV0">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="sFQ-zf-hJE" id="kQW-Kh-xfn"/>
-                            <outlet property="delegate" destination="sFQ-zf-hJE" id="jzh-2S-Z4b"/>
+                            <outlet property="dataSource" destination="wSZ-LS-wcv" id="AHh-MJ-1rn"/>
+                            <outlet property="delegate" destination="wSZ-LS-wcv" id="Zpf-Yc-dmp"/>
                         </connections>
-                    </collectionView>
-                    <connections>
-                        <outlet property="searchBar" destination="Acv-KO-NfR" id="Ls7-uu-sB2"/>
-                        <outlet property="searchCollectionView" destination="uPp-Di-m0I" id="iZ0-Yh-VIm"/>
-                    </connections>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zvb-i4-NSD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="jCS-U1-UV3"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FB9-we-a9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9202" y="-744"/>
+            <point key="canvasLocation" x="8477" y="-744"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sr0-xP-3Gt">
@@ -822,7 +788,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bzm-JA-524" kind="relationship" relationship="rootViewController" id="xNg-wB-K2g"/>
+                        <segue destination="wSZ-LS-wcv" kind="relationship" relationship="rootViewController" id="K72-9J-2ai"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="run-jm-ykR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

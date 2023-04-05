@@ -61,6 +61,7 @@
 		F15ED81729C273D9008BCEA3 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81629C273D9008BCEA3 /* SignUpViewModel.swift */; };
 		F15ED81C29C35BDC008BCEA3 /* MainScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15ED81B29C35BDC008BCEA3 /* MainScreenModel.swift */; };
 		F1630F0829C7B9B700F40978 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1630F0729C7B9B700F40978 /* SignInViewModel.swift */; };
+		F1652B4229DD79F500B8D3AC /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1652B4129DD79F500B8D3AC /* SearchTableViewController.swift */; };
 		F1654E7529D5F20000722BCB /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654E7329D5F20000722BCB /* CollectionReusableView.swift */; };
 		F1654E7629D5F20000722BCB /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1654E7429D5F20000722BCB /* CollectionReusableView.xib */; };
 		F19946CB29D5FC0B0023912C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19946C929D5FC0B0023912C /* CollectionViewCell.swift */; };
@@ -123,6 +124,7 @@
 		F15ED81629C273D9008BCEA3 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		F15ED81B29C35BDC008BCEA3 /* MainScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenModel.swift; sourceTree = "<group>"; };
 		F1630F0729C7B9B700F40978 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		F1652B4129DD79F500B8D3AC /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		F1654E7329D5F20000722BCB /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		F1654E7429D5F20000722BCB /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		F19946C929D5FC0B0023912C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -210,11 +212,12 @@
 			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
-		F142EFB629DCC2D00000BD36 /* SearchVC */ = {
+		F142EFB629DCC2D00000BD36 /* SearchScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F1652B4129DD79F500B8D3AC /* SearchTableViewController.swift */,
 			);
-			path = SearchVC;
+			path = SearchScreen;
 			sourceTree = "<group>";
 		};
 		F15BA88229BE540800289A0C /* Extension */ = {
@@ -346,13 +349,13 @@
 			path = MainCollectionSection;
 			sourceTree = "<group>";
 		};
-		F19C7E7429D9F78500442B00 /* Film */ = {
+		F19C7E7429D9F78500442B00 /* FilmScreen */ = {
 			isa = PBXGroup;
 			children = (
 				F19C7E7529D9F7A600442B00 /* FilmViewController.swift */,
 				F19C7E8129DBFE4300442B00 /* FilmViewModel.swift */,
 			);
-			path = Film;
+			path = FilmScreen;
 			sourceTree = "<group>";
 		};
 		F1E7EF76298ADB0100897C93 = {
@@ -382,8 +385,8 @@
 				F15BA88529BE543900289A0C /* SignUp */,
 				F15ED7EB29C07D08008BCEA3 /* SignIn */,
 				F15ED81829C3564B008BCEA3 /* MainScreen */,
-				F19C7E7429D9F78500442B00 /* Film */,
-				F142EFB629DCC2D00000BD36 /* SearchVC */,
+				F19C7E7429D9F78500442B00 /* FilmScreen */,
+				F142EFB629DCC2D00000BD36 /* SearchScreen */,
 				F15BA88629BE545D00289A0C /* Views */,
 				F139707129B66F4600F677DE /* LaunchScreen */,
 				F139707029B66F3300F677DE /* Delegates */,
@@ -575,6 +578,7 @@
 				F15D9EBC29D2DAF0007CFD81 /* BoxOfficeResponse.swift in Sources */,
 				F15D9EB629D2D994007CFD81 /* SeasonResponse.swift in Sources */,
 				F15D9EC029D2DC4E007CFD81 /* Fact.swift in Sources */,
+				F1652B4229DD79F500B8D3AC /* SearchTableViewController.swift in Sources */,
 				F15ED81729C273D9008BCEA3 /* SignUpViewModel.swift in Sources */,
 				F1E7EF85298ADB0200897C93 /* SceneDelegate.swift in Sources */,
 				F19946CB29D5FC0B0023912C /* CollectionViewCell.swift in Sources */,
