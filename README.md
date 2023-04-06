@@ -14,7 +14,7 @@ MoviWatch is an app that caters to movie enthusiasts by offering a platform wher
 We recommend using an iPhone 11 or newer for the best experience.
 
 ## Features
-- Easy way to search for movies based on the titleю
+- Easy way to search for movies based on the title.
 - The app provides links to streaming platforms where users can watch the movies they are interested in.
 - Each movie on MoviWatch comes with a detailed description.
 - The app allows users to create their profiles, where they can save their favorite movies.
