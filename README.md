@@ -8,6 +8,7 @@ MoviWatch is an app that caters to movie enthusiasts by offering a platform wher
 - Model-View-ViewModel (MVVM) design pattern
 - CocoaPods: Skeleton Animation
 - Notification Center
+- Work with API
 
 ## Requirements
 We recommend using an iPhone 11 or newer for the best experience.
