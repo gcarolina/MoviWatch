@@ -18,81 +18,73 @@ final class ProfileViewController: UIViewController {
     @IBOutlet private weak var personImage: UIImageView!
     
     let imagePicker = UIImagePickerController()
+    var profileViewModel = ProfileViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        personImage.layer.cornerRadius = personImage.frame.size.height / 2
-        personImage.layer.borderWidth = 1.5
-        personImage.layer.borderColor = CGColor(red: 105/255, green: 57/255, blue: 225/255, alpha: 1)
-        
+        setUpImage(image: personImage)
         imagePicker.delegate = self
-        // Добавляем жест нажатия на UIImageView
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped))
-        personImage.isUserInteractionEnabled = true
-        personImage.addGestureRecognizer(tapGesture)
-    
-        let signOutButton = UIBarButtonItem(title: "SignOut", style: .plain, target: self, action: #selector(signOutTapped))
-        signOutButton.tintColor = UIColor(red: 105, green: 57, blue: 225)
-        navigationItem.rightBarButtonItem = signOutButton
-        
-        guard let currentUser = Auth.auth().currentUser else { return }
-        let user = User(user: currentUser)
-        let ref = Database.database().reference(withPath: "users").child(String(user.userID))
-        ref.observeSingleEvent(of: .value) { [weak self] snapshot in
-            let model = UserName(snapshot: snapshot)
-            let namePerson = model?.name
-            let emailPerson = model?.email
-            DispatchQueue.main.async {
-                self?.personName.text = namePerson
-                self?.personEmail.text = emailPerson
-            }
-        }
-        
+        addTapGesture(to: personImage, target: self, action: #selector(imageViewTapped))
+        setUpButton(with: "Sign Out")
+        loadUserData()
     }
     
+    // MARK: - IBAction
+    @IBAction func imageViewTapped(_ sender: UITapGestureRecognizer) {
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let photoLibraryAction = UIAlertAction(title: "Выбрать из галереи", style: .default) { (action) in
+            self.openPhotoLibrary()
+        }
+        alertController.addAction(photoLibraryAction)
+
+        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+
+        present(alertController, animated: true, completion: nil)
+    }
+
+    // MARK: - Private actions
     @objc private func signOutTapped() {
         do {
             try Auth.auth().signOut()
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            guard let vc = storyboard.instantiateViewController(withIdentifier: "SignInViewController") as? SignInViewController else { return }
-            navigationController?.pushViewController(vc, animated: true)
+            self.pushViewController(withIdentifier: "SignInViewController", viewControllerType: SignInViewController.self, storyboardName: "Main")
         } catch {
             print(error.localizedDescription)
         }
     }
     
-    @IBAction func imageViewTapped(_ sender: UITapGestureRecognizer) {
-        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let cameraAction = UIAlertAction(title: "Сделать фото", style: .default) { (action) in
-                self.openCamera()
-            }
-            alertController.addAction(cameraAction)
-        }
-        
-        let photoLibraryAction = UIAlertAction(title: "Выбрать из галереи", style: .default) { (action) in
-            self.openPhotoLibrary()
-        }
-        alertController.addAction(photoLibraryAction)
-        
-        let cancelAction = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
-        alertController.addAction(cancelAction)
-        
-        present(alertController, animated: true, completion: nil)
-    }
-
-    func openCamera() {
-        imagePicker.sourceType = .camera
-        imagePicker.allowsEditing = true
-        present(imagePicker, animated: true, completion: nil)
-    }
-
-    func openPhotoLibrary() {
+    private func openPhotoLibrary() {
         imagePicker.sourceType = .photoLibrary
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
+    }
+    
+    private func setUpImage(image: UIImageView) {
+        image.layer.cornerRadius = personImage.frame.size.height / 2
+        image.layer.borderWidth = 1.5
+        image.layer.borderColor = CGColor(red: 105/255, green: 57/255, blue: 225/255, alpha: 1)
+    }
+    
+    private func addTapGesture(to view: UIView, target: Any, action: Selector) {
+        let tapGesture = UITapGestureRecognizer(target: target, action: action)
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    private func setUpButton(with title: String) {
+        let signOutButton = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(signOutTapped))
+        signOutButton.tintColor = UIColor(red: 105, green: 57, blue: 225)
+        navigationItem.rightBarButtonItem = signOutButton
+    }
+    
+    private func loadUserData() {
+        profileViewModel.loadData { [weak self] in
+            DispatchQueue.main.async {
+                self?.personName.text = self?.profileViewModel.name
+                self?.personEmail.text = self?.profileViewModel.email
+            }
+        }
     }
 }
 
