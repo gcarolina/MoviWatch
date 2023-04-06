@@ -21,7 +21,6 @@ final class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         mainViewModel?.getUserName(completion: { [weak self] name in
         guard let name = name else { return }
-            //вынести в стурктуру (в строки)
         self?.navigationItem.title = "Welcome, \(name)!"
         })
     }

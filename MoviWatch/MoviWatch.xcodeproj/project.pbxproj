@@ -55,6 +55,8 @@
 		F1652B4A29DDFBFB00B8D3AC /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1652B4929DDFBFA00B8D3AC /* SearchTableViewCell.swift */; };
 		F1652B4C29DE0D9A00B8D3AC /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1652B4B29DE0D9900B8D3AC /* Country.swift */; };
 		F1652B5029DE132300B8D3AC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1652B4F29DE132300B8D3AC /* SearchViewModel.swift */; };
+		F1652B5D29DEAF4900B8D3AC /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1652B5C29DEAF4900B8D3AC /* ProfileViewController.swift */; };
+		F1652B5F29DECFEA00B8D3AC /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1652B5E29DECFEA00B8D3AC /* ProfileViewModel.swift */; };
 		F1654E7529D5F20000722BCB /* CollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1654E7329D5F20000722BCB /* CollectionReusableView.swift */; };
 		F1654E7629D5F20000722BCB /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1654E7429D5F20000722BCB /* CollectionReusableView.xib */; };
 		F19946CB29D5FC0B0023912C /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19946C929D5FC0B0023912C /* CollectionViewCell.swift */; };
@@ -111,6 +113,8 @@
 		F1652B4929DDFBFA00B8D3AC /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		F1652B4B29DE0D9900B8D3AC /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		F1652B4F29DE132300B8D3AC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		F1652B5C29DEAF4900B8D3AC /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		F1652B5E29DECFEA00B8D3AC /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		F1654E7329D5F20000722BCB /* CollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableView.swift; sourceTree = "<group>"; };
 		F1654E7429D5F20000722BCB /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		F19946C929D5FC0B0023912C /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
@@ -299,6 +303,15 @@
 			path = MainScreen;
 			sourceTree = "<group>";
 		};
+		F1652B5329DE30BC00B8D3AC /* ProfileScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F1652B5C29DEAF4900B8D3AC /* ProfileViewController.swift */,
+				F1652B5E29DECFEA00B8D3AC /* ProfileViewModel.swift */,
+			);
+			path = ProfileScreen;
+			sourceTree = "<group>";
+		};
 		F19C7E6729D8DD8800442B00 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +379,7 @@
 				F15ED81829C3564B008BCEA3 /* MainScreen */,
 				F19C7E7429D9F78500442B00 /* FilmScreen */,
 				F142EFB629DCC2D00000BD36 /* SearchScreen */,
+				F1652B5329DE30BC00B8D3AC /* ProfileScreen */,
 				F15BA88629BE545D00289A0C /* Views */,
 				F139707129B66F4600F677DE /* LaunchScreen */,
 				F139707029B66F3300F677DE /* Delegates */,
@@ -556,8 +570,10 @@
 				F19946CB29D5FC0B0023912C /* CollectionViewCell.swift in Sources */,
 				F19C7E7129D9E72300442B00 /* SectionModel.swift in Sources */,
 				F1654E7529D5F20000722BCB /* CollectionReusableView.swift in Sources */,
+				F1652B5D29DEAF4900B8D3AC /* ProfileViewController.swift in Sources */,
 				F15D9EE429D4C9D5007CFD81 /* NetworkService.swift in Sources */,
 				F15D9ED829D2F53B007CFD81 /* FilmSearchByFiltersResponseItems.swift in Sources */,
+				F1652B5F29DECFEA00B8D3AC /* ProfileViewModel.swift in Sources */,
 				F19C7E7629D9F7A600442B00 /* FilmViewController.swift in Sources */,
 				F15D9ECC29D2E633007CFD81 /* PersonResponseFilms.swift in Sources */,
 				F1630F0829C7B9B700F40978 /* SignInViewModel.swift in Sources */,

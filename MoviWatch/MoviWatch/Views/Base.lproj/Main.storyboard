@@ -3,7 +3,9 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -484,7 +486,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="w3h-8R-u1u">
                                 <rect key="frame" x="0.0" y="103" width="393" height="666"/>
-                                <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.36441405300000002" green="0.15686274510000001" blue="0.66597140570000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SearchTableViewCell" rowHeight="155" id="xHy-qj-xdx" customClass="SearchTableViewCell" customModule="MoviWatch" customModuleProvider="target">
@@ -550,7 +552,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="xV7-r3-NXZ" secondAttribute="bottom" constant="43" id="qNB-Ii-twE"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="movieLengthLabel" destination="bvM-iE-djg" id="2F9-kO-cEe"/>
                                             <outlet property="moviePosterImageView" destination="DcJ-o1-xHY" id="iXY-4P-7GI"/>
@@ -562,7 +564,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RMs-tT-VJs"/>
-                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.12941176469999999" green="0.12941176469999999" blue="0.12941176469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="RMs-tT-VJs" firstAttribute="trailing" secondItem="w3h-8R-u1u" secondAttribute="trailing" id="kbU-Y7-UQS"/>
                             <constraint firstItem="w3h-8R-u1u" firstAttribute="top" secondItem="RMs-tT-VJs" secondAttribute="top" id="pSs-fC-Nf8"/>
@@ -577,7 +579,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RLH-qa-rXP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8506.1068702290067" y="-744.36619718309862"/>
+            <point key="canvasLocation" x="8450" y="-563"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="sr0-xP-3Gt">
@@ -595,6 +597,7 @@
                     <connections>
                         <segue destination="KVc-ah-DJM" kind="relationship" relationship="viewControllers" id="SHp-NJ-SFm"/>
                         <segue destination="JoR-jF-EeP" kind="relationship" relationship="viewControllers" id="5Uj-O3-JPS"/>
+                        <segue destination="EXu-6D-mkJ" kind="relationship" relationship="viewControllers" id="Bnc-TR-Za5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VWg-lv-uJH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -624,7 +627,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sUs-Ux-Eor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7583.9694656488546" y="-19.014084507042256"/>
+            <point key="canvasLocation" x="8450" y="118"/>
         </scene>
         <!--MainVC-->
         <scene sceneID="dFW-st-8f1">
@@ -640,7 +643,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kIQ-fg-rIH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8405" y="-19"/>
+            <point key="canvasLocation" x="9314" y="118"/>
         </scene>
         <!--Film View Controller-->
         <scene sceneID="h4L-Ar-1Kl">
@@ -807,7 +810,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fm8-ux-QdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9136.6412213740459" y="-19.014084507042256"/>
+            <point key="canvasLocation" x="9314" y="-563"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="H5t-sO-COy">
@@ -847,7 +850,73 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9E-rV-Kmg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10640" y="-34"/>
+            <point key="canvasLocation" x="11565.648854961832" y="-34.507042253521128"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="W2m-bz-5Oe">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tuB-by-BVm" customClass="ProfileViewController" customModule="MoviWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lru-wP-Wy7">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="Dje-6k-pWp">
+                                <rect key="frame" x="15" y="143" width="363" height="238"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cSB-AD-tmR">
+                                        <rect key="frame" x="89" y="0.66666666666665719" width="185" height="184"/>
+                                        <color key="tintColor" red="0.70196078429999997" green="0.15686274510000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="185" id="EPA-WZ-l14"/>
+                                            <constraint firstAttribute="width" secondItem="cSB-AD-tmR" secondAttribute="height" id="pto-2e-wDd"/>
+                                        </constraints>
+                                        <imageReference key="image" image="person.circle" catalog="system" symbolScale="default" renderingMode="hierarchical-single">
+                                            <hierarchicalColors>
+                                                <color red="0.70196078429999997" green="0.15686274510000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color systemColor="secondaryLabelColor"/>
+                                                <color systemColor="tertiaryLabelColor"/>
+                                            </hierarchicalColors>
+                                        </imageReference>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hWr-su-vXK">
+                                        <rect key="frame" x="181.66666666666666" y="230" width="0.0" height="8"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TwL-u9-nKJ">
+                                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="23"/>
+                                                <color key="textColor" red="0.70196078429999997" green="0.15686274510000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36441405300000002" green="0.15686274510000001" blue="0.66597140570000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rJq-FN-hnZ">
+                                                <rect key="frame" x="0.0" y="8" width="0.0" height="0.0"/>
+                                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="21"/>
+                                                <color key="textColor" red="0.70196078429999997" green="0.15686274510000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6xm-YZ-qlb"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Dje-6k-pWp" firstAttribute="leading" secondItem="6xm-YZ-qlb" secondAttribute="leading" constant="15" id="Gta-xV-TkP"/>
+                            <constraint firstItem="Dje-6k-pWp" firstAttribute="top" secondItem="6xm-YZ-qlb" secondAttribute="top" constant="40" id="f7w-wc-sq3"/>
+                            <constraint firstItem="6xm-YZ-qlb" firstAttribute="trailing" secondItem="Dje-6k-pWp" secondAttribute="trailing" constant="15" id="kp7-AD-nHW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dcM-Nb-ff7"/>
+                    <connections>
+                        <outlet property="personEmail" destination="rJq-FN-hnZ" id="jUJ-FL-gro"/>
+                        <outlet property="personImage" destination="cSB-AD-tmR" id="2Ys-MA-eL1"/>
+                        <outlet property="personName" destination="TwL-u9-nKJ" id="MPw-14-yMY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t30-UL-KRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7597.7099236641216" y="401.40845070422534"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5Wh-0L-rGi">
@@ -868,7 +937,28 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="run-jm-ykR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7583.9694656488546" y="-744.36619718309862"/>
+            <point key="canvasLocation" x="7556" y="-562"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="IIT-lR-lBP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EXu-6D-mkJ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person" catalog="system" selectedImage="person" id="rQx-dy-3iS">
+                        <color key="badgeColor" red="0.70196078429999997" green="0.15686274510000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wVu-No-mAg">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tuB-by-BVm" kind="relationship" relationship="rootViewController" id="5ZR-C1-Zhd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yl2-gq-WlH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6670.9923664122134" y="401.40845070422534"/>
         </scene>
     </scenes>
     <resources>
@@ -879,5 +969,12 @@
         <image name="house" catalog="system" width="128" height="104"/>
         <image name="key" catalog="system" width="85" height="128"/>
         <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="123"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>
