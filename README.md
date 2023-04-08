@@ -1,10 +1,10 @@
 ## MoviWatch
-MoviWatch is an app that caters to movie enthusiasts by offering a platform where they can explore and discover new films. MoviWatch is a user-friendly and comprehensive app that makes it easy for movie lovers to stay up-to-date with the latest films and find their next favorite movie.
+MoviWatch is an app that caters to movie enthusiasts by offering a platform where they can explore and discover new films. MoviWatch is comprehensive app that makes it easy for movie lovers to stay up-to-date with the latest films and find their next favorite movie. MoviWatch's user-friendly interface allows users to easily navigate through the app, view movie details, and add movies to their watchlist or favorites.
 
 ## Technologies Used
 #### MoviWatch was developed using the following technologies:
 - Swift programming language
-- Firebase realtime database and authentication to store user data
+- Firebase Realtime Database and Authentication to store user data
 - Model-View-ViewModel (MVVM) design pattern
 - CocoaPods: Skeleton Animation
 - Notification Center
