@@ -4,7 +4,7 @@ MoviWatch is an app that caters to movie enthusiasts by offering a platform wher
 ## Technologies Used
 #### MoviWatch was developed using the following technologies:
 - Swift programming language
-- Firebase storage and authentication to store user data
+- Firebase realtime database and authentication to store user data
 - Model-View-ViewModel (MVVM) design pattern
 - CocoaPods: Skeleton Animation
 - Notification Center
