@@ -22,8 +22,9 @@ We recommend using an iPhone 11 or newer for the best experience.
 
 ## Appearance
 <img src="https://user-images.githubusercontent.com/70655454/232306144-a9e55bc3-2774-4890-b694-b9d1d490beb8.jpg" width="220" height="400">
-![IMG_9890](https://user-images.githubusercontent.com/70655454/232306144-a9e55bc3-2774-4890-b694-b9d1d490beb8.jpg)
-![IMG_9891](https://user-images.githubusercontent.com/70655454/232306170-6b6a6279-885b-4b54-a05e-f21d91f27e2b.jpg)
+<img src="https://user-images.githubusercontent.com/70655454/232306170-6b6a6279-885b-4b54-a05e-f21d91f27e2b.jpg" width="220" height="400">
+
+
 ![IMG_9892](https://user-images.githubusercontent.com/70655454/232306214-a33bea8f-5009-4e37-a287-1ecc7ef327a0.jpg)
 ![IMG_9893](https://user-images.githubusercontent.com/70655454/232306247-c9d6526c-8b72-4d48-9919-5006febceda8.jpg)
 ![IMG_9894](https://user-images.githubusercontent.com/70655454/232306291-b266eda7-cd44-4ccd-9820-b858706335ef.jpg)
