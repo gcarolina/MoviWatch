@@ -26,9 +26,7 @@ We recommend using an iPhone 11 or newer for the best experience.
 <img src="https://user-images.githubusercontent.com/70655454/232306247-c9d6526c-8b72-4d48-9919-5006febceda8.jpg" width="220" height="400">
 <img src="https://user-images.githubusercontent.com/70655454/232306309-32e3193b-7686-4585-9e74-98c86f9729fc.jpg" width="220" height="400">
 <img src="https://user-images.githubusercontent.com/70655454/232306346-2bf2b741-856f-44a9-afae-26dcb705aaee.jpg" width="220" height="400">
-<img src="https://user-images.githubusercontent.com/70655454/232306367-32c04064-1b53-4a36-9b4f-f42e52dee727.jpg" width="220" height="400">
 <img src="https://user-images.githubusercontent.com/70655454/232306490-f6004260-ca4f-4893-985a-9da6a81b9243.jpg" width="220" height="400">
-<img src="https://user-images.githubusercontent.com/70655454/232306497-cf0af356-4e2c-45c8-8221-754b1b5208f1.jpg" width="220" height="400">
 
 ## Support
 If you have any questions or issues while playing Boat Simulator, please contact our support team at https://github.com/gcarolina
