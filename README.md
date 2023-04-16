@@ -25,7 +25,6 @@ We recommend using an iPhone 11 or newer for the best experience.
 <img src="https://user-images.githubusercontent.com/70655454/232306214-a33bea8f-5009-4e37-a287-1ecc7ef327a0.jpg" width="220" height="400">
 <img src="https://user-images.githubusercontent.com/70655454/232306247-c9d6526c-8b72-4d48-9919-5006febceda8.jpg" width="220" height="400">
 <img src="https://user-images.githubusercontent.com/70655454/232306309-32e3193b-7686-4585-9e74-98c86f9729fc.jpg" width="220" height="400">
-<img src="https://user-images.githubusercontent.com/70655454/232306346-2bf2b741-856f-44a9-afae-26dcb705aaee.jpg" width="220" height="400">
 <img src="https://user-images.githubusercontent.com/70655454/232306490-f6004260-ca4f-4893-985a-9da6a81b9243.jpg" width="220" height="400">
 
 ## Support
